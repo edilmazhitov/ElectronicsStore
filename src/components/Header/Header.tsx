@@ -1,22 +1,35 @@
-import ContactDetails from "../ContactDetails/ContactDetails"
-import Container from "../Container/Container"
-import Navbar from "../NavbarBlock/NavbarBlock"
-import styles from "./Header.module.scss"
-
+import ContactDetails from '../ContactDetails/ContactDetails'
+import Container from '../Container/Container'
+import Navbar from '../NavbarBlock/NavbarBlock'
+import styles from './Header.module.scss'
+import CatalogButton from "../CatalogButton/CatalogButton";
+import SearchBlock from "../SearchBlock/SearchBlock";
+import UserMenu from "../UserMenu/UserMenu.tsx";
 
 const Header = () => {
-
-    return (
-        <header className={styles.header}>
-            <Container>
-                <div className={styles.header__top}>
-                    <Navbar />
-                    <ContactDetails />
-                </div>
-                <div className={styles.header__line} />
-            </Container>
-        </header>   
-    )
+  return (
+    <header className={styles.header}>
+      <Container>
+        <div className={styles.header__top}>
+          <Navbar />
+          <ContactDetails />
+        </div>
+        <div className={styles.header__line} />
+        <div className={styles.header__bottom}>
+          <img
+            className={styles.header__logo}
+            src="./Logo.png"
+            alt="Electronics Store"
+            width="215"
+            height="54"
+          />
+          <CatalogButton />
+          <SearchBlock />
+          <UserMenu />
+        </div>
+      </Container>
+    </header>
+  )
 }
 
 export default Header

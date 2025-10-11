@@ -1,17 +1,16 @@
 .navbar {
+  &__list {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    column-gap: 30px;
 
-    &__list {
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        column-gap: 30px;
-        
-        &-item {
-        }
+    &-item {
     }
+  }
 
-    &__link {
-        color: var(--link-color);
-        font-size: 14px;
-    }
+  &__link {
+    color: var(--link-color);
+    font-size: 14px;
+  }
 }

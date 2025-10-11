@@ -1,15 +1,30 @@
 * {
-    list-style-type: none;
-    text-decoration: none;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --link-color: #6c6f71;
+  --color-gray: #4e5760;
+  --color-gray-2: #6B7076;
+
+  --color-dark-1: #000000;
+
+  --color-dark-blue: #2a5e8d;
+  --color-blue: #186FD4;
+
+  --color-light: #FFFFFF;
 }
 
 
-:root {
+input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none
+}
 
-    --link-color: #6C6F71;
-    --color-gray: #4E5760;
-
-    --color-dark-1: #000000;
-
-    --color-dark-blue: #2A5E8D;
+input[type="search"]:focus {
+  border-color: #ccc;
+  box-shadow: none;
+  outline: none;
 }

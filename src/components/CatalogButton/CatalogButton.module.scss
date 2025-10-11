@@ -1,0 +1,36 @@
+.catalog-button {
+  width: 154px;
+  height: 52px;
+  border-radius: 8px;
+  border: none;
+
+  background-color: var(--color-blue);
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  column-gap: 17px;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 6px;
+  }
+
+  &__line {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: var(--color-light);
+    border-radius: 1px;
+
+  }
+
+  &__text {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-light);
+    text-transform: uppercase;
+  }
+}
