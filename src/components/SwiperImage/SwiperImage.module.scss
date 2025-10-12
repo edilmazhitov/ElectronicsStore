@@ -1,0 +1,61 @@
+@use '@abstracts' as *;
+
+.swiper-image {
+  &__slide {
+    height: fluid(506, 451);
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__title {
+    color: var(--color-gray-3);
+    font-size: fluid(48, 30);
+    font-weight: 700;
+    padding: rem(123) 0 0 fluid(60, 15);
+
+    @include mobile-l {
+      text-align: center;
+      padding-top: rem(250);
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: rem(14);
+    margin-top: rem(14);
+    margin-bottom: rem(23);
+
+    padding: 0 0 0 fluid(60, 15);
+    @include laptop {
+      font-size: rem(15);
+      margin-top: rem(8);
+    }
+
+    @include mobile-l {
+      margin-top: rem(15);
+      display: none;
+    }
+  }
+
+  &__button {
+    width: fluid(252, 193);
+    height: fluid(62, 53);
+    border-radius: rem(8);
+    border: none;
+    background-color: #011120;
+    color: var(--color-light);
+    text-transform: uppercase;
+    font-size: rem(13);
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 0 fluid(27, 21);
+    margin: 0 0 0 fluid(60, 15);
+
+    @include hover {
+      background-color: var(--color-light);
+      border: rem(1) solid #011120;
+      color: #011120;
+    }
+  }
+}
