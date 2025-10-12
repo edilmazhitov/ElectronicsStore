@@ -1,17 +1,11 @@
-import styles from "./SearchBlock.module.scss"
-import { IoSearchOutline } from "react-icons/io5";
-
+import styles from './SearchBlock.module.scss'
+import { IoSearchOutline } from 'react-icons/io5'
 
 const SearchBlock = () => {
-
   return (
     <div className={styles['search-block']}>
       <form action="" className={styles['search-block__form']}>
-
-        <label
-          htmlFor="search-block"
-          className={styles['search-block__label']}
-        >
+        <label htmlFor="search-block" className={styles['search-block__label']}>
           <input
             type="search"
             id="search-block"
@@ -25,7 +19,7 @@ const SearchBlock = () => {
         </button>
       </form>
     </div>
-  );
-};
+  )
+}
 
 export default SearchBlock

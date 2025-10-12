@@ -1,5 +1,13 @@
+import Container from '@/components/Container/Container.tsx'
+
 const Home = () => {
-  return <h1>HOME PAGES</h1>
+  return (
+    <>
+      <Container>
+        <h1>HOME PAGES</h1>
+      </Container>
+    </>
+  )
 }
 
 export default Home

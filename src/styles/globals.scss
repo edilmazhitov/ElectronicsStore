@@ -6,24 +6,23 @@
 :root {
   --link-color: #6c6f71;
   --color-gray: #4e5760;
-  --color-gray-2: #6B7076;
+  --color-gray-2: #6b7076;
 
   --color-dark-1: #000000;
 
   --color-dark-blue: #2a5e8d;
-  --color-blue: #186FD4;
+  --color-blue: #186fd4;
 
-  --color-light: #FFFFFF;
+  --color-light: #ffffff;
 }
 
-
-input[type="search"] {
+input[type='search'] {
   -webkit-appearance: none;
   appearance: none;
-  outline: none
+  outline: none;
 }
 
-input[type="search"]:focus {
+input[type='search']:focus {
   border-color: #ccc;
   box-shadow: none;
   outline: none;

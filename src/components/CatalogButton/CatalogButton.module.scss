@@ -1,34 +1,39 @@
-.catalog-button {
-  width: 154px;
-  height: 52px;
-  border-radius: 8px;
-  border: none;
+@use '@abstracts' as *;
 
+.catalog-button {
+  width: rem(154);
+  height: rem(52);
+  border-radius: rem(8);
+  border: none;
   background-color: var(--color-blue);
 
   justify-content: center;
   align-items: center;
   display: flex;
-  column-gap: 17px;
+  column-gap: rem(17);
+
+  @include mobile-l {
+    width: rem(134);
+    height: rem(46);
+  }
 
   &__left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 6px;
+    height: rem(6);
   }
 
   &__line {
     display: block;
-    width: 18px;
-    height: 2px;
+    width: rem(18);
+    height: rem(2);
     background-color: var(--color-light);
-    border-radius: 1px;
-
+    border-radius: rem(1);
   }
 
   &__text {
-    font-size: 13px;
+    font-size: rem(12);
     font-weight: 700;
     color: var(--color-light);
     text-transform: uppercase;

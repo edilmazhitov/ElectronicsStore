@@ -1,0 +1,29 @@
+@use '@abstracts' as *;
+
+.search-catalog-group {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  column-gap: fluid(30, 10);
+
+  @include laptop {
+    position: absolute;
+    margin-top: rem(23);
+    right: rem(100);
+  }
+
+  @include tablet {
+    right: rem(70);
+  }
+
+  @include mobile-above {
+    right: rem(30);
+  }
+
+  @include mobile {
+    right: rem(15);
+  }
+  @include mobile-s-above {
+    right: rem(15);
+  }
+}

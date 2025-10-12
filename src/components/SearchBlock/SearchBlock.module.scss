@@ -1,39 +1,35 @@
-@use "@abstracts" as *;
+@use '@abstracts' as *;
 
 .search-block {
-//  width: 722px;
-  width: fluid(722, 186);
-  height: fluid(52,46);
+  width: fluid(700, 186);
+  height: fluid(52, 46);
   background-color: var(--color-blue);
   border-radius: rem(8);
-  padding: rem(2) 0 0 fluid(3,2);
-
+  padding: rem(2) 0 0 rem(3);
 
   &__input {
-    width: fluid(660, 144);
-    height: fluid(46,42);
+    width: fluid(640, 144);
+    height: fluid(46, 42);
     border-radius: rem(6);
     border: none;
-    padding: 15px 16px;
-    font-size: rem(14);
+    padding: rem(14) rem(16);
+    font-size: 14px;
 
     &:active {
       border: none;
     }
-
-
   }
 
   &__button {
-    width: fluid(56,38);
-    height: fluid(46,42);
+    width: fluid(56, 38);
+    height: fluid(46, 42);
     background-color: transparent;
     border: none;
     color: var(--color-light);
 
     &-icon {
-      width: fluid(18,14);
-      height: fluid(18,14);
+      width: rem(14);
+      height: rem(14);
     }
   }
 }

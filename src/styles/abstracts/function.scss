@@ -1,6 +1,5 @@
 @use 'sass:math';
 
-
 @function fluid($max: 100, $min: 10) {
   $maxViewportWidth: 1640;
   $minViewportWidth: 360;
@@ -20,11 +19,10 @@
   );
 }
 
-
 @function rem($pixel) {
   @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) + rem;
   } @else {
-    @error 'Не используйте единицы измерения при работе с функцией rem()! Передавайте аргументом только числа.'
+    @error 'Не используйте единицы измерения при работе с функцией rem()! Передавайте аргументом только числа.';
   }
 }

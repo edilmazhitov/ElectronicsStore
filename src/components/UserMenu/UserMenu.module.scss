@@ -1,33 +1,39 @@
-@use "@abstracts" as *;
+@use '@abstracts' as *;
 
 .user-menu {
-
-
   &__list {
     justify-content: center;
     align-items: center;
     display: flex;
-    column-gap: fluid(27,6);
+    column-gap: fluid(27, 6);
+
+    &-item {
+      &:first-child {
+        @include mobile-l {
+          display: none;
+        }
+      }
+    }
   }
 
   &__link {
     align-items: center;
     display: flex;
+    text-align: center;
     flex-direction: column;
   }
 
   &__icon {
     width: rem(33);
     height: rem(25);
-    color: #16191E;
+    color: #16191e;
   }
 
   &__text {
     color: var(--color-gray-2);
-    font-size: rem(14);
+    font-size: fluid(14, 2);
 
-
-    @include mobile {
+    @include tablet {
       display: none;
     }
   }

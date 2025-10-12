@@ -1,24 +1,29 @@
-@use "@abstracts" as *;
+@use '@abstracts' as *;
 
 .header {
-  &__top, &__bottom {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
+  &__logo {
+    width: fluid(215, 159);
+    height: fluid(54, 40);
   }
 
   &__bottom {
-    padding: fluid(28,15) 0;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: relative;
   }
 
-  &__logo {
-    width: fluid(215,159);
-    height: fluid(54,40);
+  &__center {
+    position: static;
+    width: auto;
+    margin-top: 0;
   }
 
-  &__line {
-    width: 100%;
-    height: 1px;
-    background-color: gray;
+  @include laptop {
+    height: rem(100);
+  }
+
+  @include mobile-l {
+    height: rem(70);
   }
 }

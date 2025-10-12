@@ -24,13 +24,11 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-
-
     /* Aliases */
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"],
-      "abstracts/*": ["abstracts/*"],
+      "abstracts/*": ["abstracts/*"]
     }
   },
   "include": ["src"]

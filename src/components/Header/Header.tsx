@@ -1,19 +1,18 @@
-import ContactDetails from '../ContactDetails/ContactDetails'
+// import ContactDetails from '../ContactDetails/ContactDetails'
 import Container from '../Container/Container'
-import Navbar from '../NavbarBlock/NavbarBlock'
+// import Navbar from '../NavbarBlock/NavbarBlock'
 import styles from './Header.module.scss'
-import CatalogButton from "../CatalogButton/CatalogButton";
-import SearchBlock from "../SearchBlock/SearchBlock";
-import UserMenu from "../UserMenu/UserMenu.tsx";
+import UserMenu from '../UserMenu/UserMenu.tsx'
+import SearchCatalogGroup from '../SearchCatalogGroup/SearchCatalogGroup.tsx'
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <Container>
-        <div className={styles.header__top}>
-          <Navbar />
-          <ContactDetails />
-        </div>
+        {/*<div className={styles.header__top}>*/}
+        {/*  <Navbar />*/}
+        {/*  <ContactDetails />*/}
+        {/*</div>*/}
         <div className={styles.header__line} />
         <div className={styles.header__bottom}>
           <img
@@ -23,8 +22,10 @@ const Header = () => {
             width="215"
             height="54"
           />
-          <CatalogButton />
-          <SearchBlock />
+          <div className={styles.header__center}>
+            <SearchCatalogGroup />
+          </div>
+
           <UserMenu />
         </div>
       </Container>

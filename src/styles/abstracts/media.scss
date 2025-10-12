@@ -1,41 +1,63 @@
-@use "./function" as *;
+@use './function' as *;
 
 $laptop: 768.98;
+$tablet: 600.98;
 $mobile: 360.98;
+$mobile-l: 425.98;
 $mobile-s: 320.98;
 
 @mixin laptop {
   @media (width <= rem($laptop)) {
-    @content
+    @content;
   }
 }
 
 @mixin laptop-above {
   @media (width > rem($laptop)) {
-    @content
+    @content;
   }
 }
 
 @mixin mobile {
   @media (width <= rem($mobile)) {
-    @content
+    @content;
   }
 }
 @mixin mobile-above {
   @media (width > rem($mobile)) {
-    @content
+    @content;
+  }
+}
+@mixin mobile-l {
+  @media (width <= rem($mobile-l)) {
+    @content;
+  }
+}
+@mixin mobile-l-above {
+  @media (width > rem($mobile-l)) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (width <= rem($tablet)) {
+    @content;
+  }
+}
+@mixin tablet-above {
+  @media (width > rem($tablet)) {
+    @content;
   }
 }
 
 @mixin mobile-s {
   @media (width <= rem($mobile-s)) {
-    @content
+    @content;
   }
 }
 
 @mixin mobile-s-above {
   @media (width > rem($mobile-s)) {
-    @content
+    @content;
   }
 }
 
