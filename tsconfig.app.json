@@ -28,7 +28,11 @@
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"],
-      "abstracts/*": ["abstracts/*"]
+      "@abstracts/*": ["styles/abstracts/*"],
+      "@types/*": ["types/*"],
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"]
     }
   },
   "include": ["src"]

@@ -1,10 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './NavbarBlock.module.scss'
-
-type NavbarT = {
-  to: string
-  name: string
-}
+import type { NavbarT } from '@/types/navbarTypes'
 
 const Navbar = () => {
   const navbarList: NavbarT[] = [
