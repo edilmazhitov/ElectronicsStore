@@ -1,3 +1,5 @@
+@use '@abstracts' as *;
+
 .footer {
   &__logo {
     width: fluid(215, 159);
