@@ -7,15 +7,12 @@
 .home-navbar {
   margin-top: rem(50);
 
-
-
   @include laptop {
     margin-top: rem(30);
   }
 
   &__list {
-
-          @include mobile-l {
+    @include mobile-l {
       justify-content: center;
       display: flex;
     }
@@ -23,7 +20,7 @@
 }
 
 .home-interesting {
-  margin-top: fluid(50,30);
+  margin-top: fluid(50, 30);
 
   &__list {
     justify-content: space-between;
@@ -62,47 +59,45 @@
 }
 
 .home-discounts {
-
   &__block {
     justify-content: space-between;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    
+
     @include mobile-l {
       justify-content: center;
     }
-  } 
+  }
 
   &__box {
-    width: fluid(390,230);
-    height: fluid(176,104);
+    width: fluid(390, 230);
+    height: fluid(176, 104);
 
-
-margin-top: rem(15);
-    padding: fluid(36,15) fluid(43,18);
+    margin-top: rem(15);
+    padding: fluid(36, 15) fluid(43, 18);
 
     &:first-child {
-      background: url("../../assets/discountsImg1.png") center/cover no-repeat;
+      background: url('../../assets/discountsImg1.png') center/cover no-repeat;
     }
     &:nth-child(2) {
-      background: url("../../assets/discountsImg2.png") center/cover no-repeat;
+      background: url('../../assets/discountsImg2.png') center/cover no-repeat;
     }
     &:nth-child(3) {
-      background: url("../../assets/discountsImg3.png") center/cover no-repeat;
+      background: url('../../assets/discountsImg3.png') center/cover no-repeat;
     }
     &:last-child {
-      background: url("../../assets/discountsImg4.png") center/cover no-repeat;
+      background: url('../../assets/discountsImg4.png') center/cover no-repeat;
     }
 
     &-title {
-      @include fluid-text(22,17);
+      @include fluid-text(22, 17);
       color: var(--color-gray-3);
     }
 
     &-text {
-      width: fluid(73,61);
-      height: fluid(31,25);
+      width: fluid(73, 61);
+      height: fluid(31, 25);
       border-radius: rem(6);
       border: none;
       background-color: var(--color-dark-blue-2);
@@ -130,7 +125,7 @@ margin-top: rem(15);
   display: flex;
 
   &__title {
-    margin-top: fluid(50,30);
+    margin-top: fluid(50, 30);
     color: var(--color-dark-2);
     font-weight: 700;
     font-size: rem(33);
@@ -139,15 +134,13 @@ margin-top: rem(15);
       font-size: rem(26);
     }
   }
-  
 
   &__list {
     justify-content: space-between;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    padding-top: fluid(40,25);
-
+    padding-top: fluid(40, 25);
 
     &-item {
       background-color: var(--color-light);
@@ -155,18 +148,15 @@ margin-top: rem(15);
       height: rem(80);
       border-radius: rem(8);
 
-      margin-bottom: fluid(50,30);
+      margin-bottom: fluid(50, 30);
       justify-content: center;
       align-items: center;
       display: flex;
     }
-
-
   }
 
-      &__image {
-      width: rem(150);
-      height: rem(32);
-      
-    }
+  &__image {
+    width: rem(150);
+    height: rem(32);
+  }
 }
