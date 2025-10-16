@@ -7,8 +7,18 @@
 .home-navbar {
   margin-top: rem(50);
 
+
+
   @include laptop {
     margin-top: rem(30);
+  }
+
+  &__list {
+
+          @include mobile-l {
+      justify-content: center;
+      display: flex;
+    }
   }
 }
 
@@ -57,13 +67,19 @@
     justify-content: space-between;
     align-items: center;
     display: flex;
-  }
+    flex-wrap: wrap;
+    
+    @include mobile-l {
+      justify-content: center;
+    }
+  } 
 
   &__box {
     width: fluid(390,230);
     height: fluid(176,104);
 
 
+margin-top: rem(15);
     padding: fluid(36,15) fluid(43,18);
 
     &:first-child {
@@ -106,4 +122,51 @@
       }
     }
   }
+}
+
+.brand {
+  background-color: var(--color-white);
+  justify-content: center;
+  display: flex;
+
+  &__title {
+    margin-top: fluid(50,30);
+    color: var(--color-dark-2);
+    font-weight: 700;
+    font-size: rem(33);
+
+    @include laptop {
+      font-size: rem(26);
+    }
+  }
+  
+
+  &__list {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: fluid(40,25);
+
+
+    &-item {
+      background-color: var(--color-light);
+      width: rem(214);
+      height: rem(80);
+      border-radius: rem(8);
+
+      margin-bottom: fluid(50,30);
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+
+  }
+
+      &__image {
+      width: rem(150);
+      height: rem(32);
+      
+    }
 }

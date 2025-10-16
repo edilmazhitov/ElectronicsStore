@@ -7,6 +7,15 @@ import { CiCreditCard1 ,CiDiscount1} from "react-icons/ci";
 import { SlSocialDropbox } from "react-icons/sl";
 import { TbListDetails } from "react-icons/tb";
 
+import brand from "@assets/brandImages/brand.png"
+import brand2 from "@assets/brandImages/brand2.png"
+import brand3 from "@assets/brandImages/brand3.png"
+import brand4 from "@assets/brandImages/brand4.png"
+import brand5 from "@assets/brandImages/brand5.png"
+import brand6 from "@assets/brandImages/brand6.png"
+import brand7 from "@assets/brandImages/brand7.png"
+
+
 const Home = () => {
   return (
     <main className="main">
@@ -97,6 +106,36 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </Container>
+      </section>
+      <section className={styles.brand}>
+        <Container>
+            <h2 className={styles.brand__title}>
+              Популярные бренды
+            </h2>
+            <ul className={styles.brand__list}>
+              <li className={styles['brand__list-item']}>
+                  <img src={brand} className={styles.brand__image} width="150" height="120" alt="brand" />
+              </li>
+              <li className={styles['brand__list-item']}>
+                  <img src={brand2} className={styles.brand__image} width="150" height="120" alt="brand" />
+              </li>
+              <li className={styles['brand__list-item']}>
+                  <img src={brand3} className={styles.brand__image} width="150" height="120" alt="brand" />
+              </li>
+              <li className={styles['brand__list-item']}>
+                  <img src={brand4} className={styles.brand__image} width="150" height="120" alt="brand" />
+              </li>
+              <li className={styles['brand__list-item']}>
+                  <img src={brand5} className={styles.brand__image} width="150" height="120" alt="brand" />
+              </li>
+              <li className={styles['brand__list-item']}>
+                  <img src={brand6} className={styles.brand__image} width="150" height="120" alt="brand" />
+              </li>
+              <li className={styles['brand__list-item']}>
+                  <img src={brand7} className={styles.brand__image} width="150" height="120" alt="brand" />
+              </li>
+            </ul>
         </Container>
       </section>
     </main>
