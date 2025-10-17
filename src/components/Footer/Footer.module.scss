@@ -5,4 +5,156 @@
     width: fluid(215, 159);
     height: fluid(54, 40);
   }
+
+  &__top {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin: fluid(41, 15) 0;
+
+    &-left {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      column-gap: fluid(51, 20);
+    }
+
+    @include laptop {
+      flex-wrap: wrap;
+    }
+  }
+  &__licencess,
+  &__documents {
+    color: #35383a;
+    font-size: rem(13);
+    font-weight: 400;
+
+    @include laptop-s {
+      display: none;
+    }
+  }
+
+  &__email {
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: rem(13);
+      font-weight: 550;
+    }
+
+    &-link {
+      text-decoration: underline;
+    }
+
+    @include mobile-l {
+      margin-top: rem(10);
+    }
+  }
+
+  &__time {
+    &-number {
+      color: var(--color-dark-1);
+      font-weight: 550;
+      font-size: rem(21);
+
+      @include laptop {
+        font-size: rem(18);
+      }
+    }
+
+    &-text {
+      font-size: rem(13);
+      font-weight: 400;
+      color: var(--color-gray);
+    }
+
+    @include mobile-l {
+      margin-top: rem(10);
+    }
+  }
+
+  &__button {
+    width: fluid(214, 151);
+    height: rem(44);
+    border: rem(1) solid red;
+    border-radius: rem(4);
+    @include fluid-text(12, 11);
+    text-transform: uppercase;
+    color: #474b4e;
+    font-weight: 700;
+
+    @include hovers {
+      background-color: red;
+
+      border: rem(1) solid var(--color-dark-1);
+    }
+
+    @include mobile-s {
+      margin-top: rem(10);
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: rem(1);
+    background-color: #dce1e7;
+  }
+
+  &__block {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    @include laptop {
+      flex-direction: column;
+    }
+  }
+
+  &__information {
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      column-gap: fluid(120, 40);
+    }
+    &-link {
+      @include fluid-text(16, 15);
+      color: #404244;
+
+      @include mobile-l {
+        margin-top: rem(5);
+      }
+
+      @include hovers {
+        color: var(--color-blue);
+      }
+    }
+  }
+  &__catalog {
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      column-gap: fluid(100, 0);
+
+      @include laptop-s {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include mobile-l {
+        display: block;
+      }
+    }
+
+    &-link {
+      @include fluid-text(16, 15);
+      color: #404244;
+
+      @include mobile-l {
+        margin-top: rem(5);
+      }
+
+      @include hovers {
+        color: var(--color-blue);
+      }
+    }
+  }
 }

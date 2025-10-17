@@ -129,20 +129,22 @@ const Footer = () => {
     <footer className={styles.footer}>
       <Container>
         <div className={styles.footer__top}>
-          <img
-            src="./Logo.png"
-            className={styles.footer__logo}
-            width="215"
-            height="54"
-            alt="Logo"
-          />
-          <h2 className={styles.footer__licencess}>ООО «Стройоптторг»</h2>
-          <h2 className={styles.footer__documnents}>
+          <div className={styles['footer__top-left']}>
+            <img
+              src="./Logo.png"
+              className={styles.footer__logo}
+              width="215"
+              height="54"
+              alt="Logo"
+            />
+            <h2 className={styles.footer__licencess}>ООО «Стройоптторг»</h2>
+          </div>
+          <h2 className={styles.footer__documents}>
             ИНН: 0901051787 <br />
             КПП 090101001
           </h2>
           <div className={styles.footer__email}>
-            <h2>Email:</h2>
+            <p>Email:</p>
             <Link
               to="mailto:info@stroiopttorg.ru"
               className={styles['footer__email-link']}
@@ -152,7 +154,7 @@ const Footer = () => {
           </div>
           <div className={styles.footer__time}>
             <Link
-              className={styles['footer__time=-number']}
+              className={styles['footer__time-number']}
               to="tel:88004440065"
             >
               8 800 444 00 65

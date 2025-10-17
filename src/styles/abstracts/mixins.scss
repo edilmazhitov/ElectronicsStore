@@ -14,3 +14,13 @@
   opacity: 1;
   visibility: visible;
 }
+
+@mixin hovers {
+  @media (hover: hover) and (pointer: fine) {
+    transition: 0.5s all;
+    &:hover {
+      transition: 0.5s all;
+      @content;
+    }
+  }
+}
