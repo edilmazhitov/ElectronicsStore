@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "email": "zusupovaerkinai@gmail.com",
+      "password": "$2a$10$Cb7tYZZB20FOTFkpxT8Bsu0bcO.hTUKH1UZ/ctF9PcTpkOIyZo8VO",
+      "id": 1,
+      "fullName": "Эдил Мажитов",
+      "region": "Moscow",
+      "phoneNumber": "666655555",
+      "balance": 0
+    }
+  ],
+  "products": []
+}

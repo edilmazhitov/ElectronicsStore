@@ -2,9 +2,11 @@ import { createBrowserRouter } from 'react-router-dom'
 import type { RouteObject } from 'react-router'
 
 import Root from '../Root/Root'
-import Home from '../pages/Home/Home'
+import Home from '@pages/Home/Home'
+import Register from '@pages/Register/Register'
+import Login from '@pages/Login/Login'
 
-const router: RouteObject[] = [
+const routes: RouteObject[] = [
   {
     path: '/',
     element: <Root />,
@@ -15,6 +17,14 @@ const router: RouteObject[] = [
       },
     ],
   },
+  {
+    path: '/register',
+    element: <Register />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
 ]
 
-export default createBrowserRouter(router)
+export const router = createBrowserRouter(routes)
