@@ -17,8 +17,8 @@ export default defineConfig([
     ],
     rules: {
       'no-console': 'warn',
-      'eqeqeq': 'warn',
-      'curly': 'warn',
+      eqeqeq: 'warn',
+      curly: 'warn',
       'no-else-return': 'warn',
     },
     languageOptions: {

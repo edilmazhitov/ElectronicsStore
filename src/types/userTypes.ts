@@ -1,4 +1,4 @@
-type Status = 'idle' | 'error' | 'loading' | 'success' | null
+export type Status = 'idle' | 'error' | 'loading' | 'success' | null
 
 export interface IUser {
   email: string
