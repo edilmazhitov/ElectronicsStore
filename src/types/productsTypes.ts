@@ -19,3 +19,11 @@ export interface IProductState {
 export type IFavorites = {
   data: [] | IProduct[]
 }
+
+interface ICartItem extends IProduct {
+  count: number
+}
+
+export interface ICartItemState {
+  data: ICartItem[]
+}

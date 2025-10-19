@@ -4,6 +4,7 @@ import { getAllProducts } from '@/store/reducers/products'
 import styles from './Products.module.scss'
 import { toggleFavorites } from '@/store/reducers/favorites'
 import type { IProduct } from '@/types/productsTypes'
+import { addCarts } from '@/store/reducers/carts.ts'
 
 const Products = () => {
   const dispatch = useAppDispatch()
@@ -18,6 +19,10 @@ const Products = () => {
     dispatch(toggleFavorites(item))
   }
 
+  const addToCart = (item: IProduct) => {
+    dispatch(addCarts(item))
+  }
+
   return (
     <div className={styles.products}>
       {data?.map((item) => (
@@ -25,6 +30,7 @@ const Products = () => {
           <h2>{item.title}</h2>
 
           <button onClick={() => handleFavorites(item)}>FAVORITES</button>
+          <button onClick={() => addToCart(item)}>ADD TO CART</button>
         </div>
       ))}
     </div>

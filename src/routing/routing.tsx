@@ -6,6 +6,7 @@ import Home from '@pages/Home/Home'
 import Register from '@pages/Register/Register'
 import Login from '@pages/Login/Login'
 import Favorites from '@pages/Favorites/Favorites'
+import Carts from '@pages/Carts/Carts'
 
 const routes: RouteObject[] = [
   {
@@ -19,6 +20,10 @@ const routes: RouteObject[] = [
       {
         path: 'favorites',
         element: <Favorites />,
+      },
+      {
+        path: 'carts',
+        element: <Carts />,
       },
     ],
   },

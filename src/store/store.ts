@@ -4,12 +4,14 @@ import { combineReducers } from '@reduxjs/toolkit'
 import { persistReducer, persistStore } from 'redux-persist'
 import user from './reducers/user'
 import products from './reducers/products'
-import favorites from '@/store/reducers/favorites'
+import favorites from './reducers/favorites'
+import carts from './reducers/carts'
 
 const rootReducer = combineReducers({
   user,
   products,
   favorites,
+  carts,
 })
 
 const persistConfig = {
