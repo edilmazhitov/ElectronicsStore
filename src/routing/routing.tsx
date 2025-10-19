@@ -5,6 +5,7 @@ import Root from '../Root/Root'
 import Home from '@pages/Home/Home'
 import Register from '@pages/Register/Register'
 import Login from '@pages/Login/Login'
+import Favorites from '@pages/Favorites/Favorites'
 
 const routes: RouteObject[] = [
   {
@@ -14,6 +15,10 @@ const routes: RouteObject[] = [
       {
         path: '',
         element: <Home />,
+      },
+      {
+        path: 'favorites',
+        element: <Favorites />,
       },
     ],
   },

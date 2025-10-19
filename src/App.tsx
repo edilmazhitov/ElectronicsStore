@@ -6,12 +6,6 @@ import { useEffect } from 'react'
 import { getAllProducts } from '@/store/reducers/products.ts'
 
 const App = () => {
-  const dispatch = useAppDispatch()
-
-  useEffect(() => {
-    dispatch(getAllProducts())
-  }, [dispatch])
-
   return (
     <>
       <RouterProvider router={router} />

@@ -15,3 +15,7 @@ export interface IProductState {
   status: Status
   error: string | null
 }
+
+export type IFavorites = {
+  data: [] | IProduct[]
+}

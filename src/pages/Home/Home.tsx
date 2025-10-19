@@ -1,6 +1,8 @@
+import styles from './Home.module.scss'
+
 import Container from '@/components/Container/Container.tsx'
 import SwiperImage from '@/components/SwiperImage/SwiperImage.tsx'
-import styles from './Home.module.scss'
+
 import HomeNavbar from '@/components/HomeNavbar/HomeNavbar.tsx'
 
 import { CiCreditCard1, CiDiscount1 } from 'react-icons/ci'
@@ -14,6 +16,7 @@ import brand4 from '@assets/brandImages/brand4.png'
 import brand5 from '@assets/brandImages/brand5.png'
 import brand6 from '@assets/brandImages/brand6.png'
 import brand7 from '@assets/brandImages/brand7.png'
+import Products from '@components/Products/Products'
 
 const Home = () => {
   return (
@@ -22,6 +25,7 @@ const Home = () => {
         <Container>
           <SwiperImage />
         </Container>
+        <Products />
       </section>
       <section className={styles['home-interesting']}>
         <Container>
