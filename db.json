@@ -74,6 +74,38 @@
         }
       ],
       "totalPrice": 1500
+    },
+    {
+      "id": 1760879187579,
+      "user": {
+        "fullName": "Эдил Мажитов",
+        "email": "zusupovaerkinai@gmail.com",
+        "address": "aaa"
+      },
+      "items": [
+        {
+          "id": 1,
+          "title": "title 1",
+          "count": 2,
+          "price": 500,
+          "total": 1000
+        },
+        {
+          "id": 2,
+          "title": "title 2",
+          "count": 2,
+          "price": 1000,
+          "total": 2000
+        },
+        {
+          "id": 3,
+          "title": "title 3",
+          "count": 1,
+          "price": 2000,
+          "total": 2000
+        }
+      ],
+      "totalPrice": 5000
     }
   ]
 }
