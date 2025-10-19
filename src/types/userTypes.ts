@@ -1,4 +1,4 @@
-export type Status = 'idle' | 'error' | 'loading' | 'success' | null
+import type { Status } from './reduxTypes'
 
 export interface IUser {
   email: string
@@ -15,8 +15,4 @@ export interface IUserState {
   data: null | IUser
   status: Status
   error: string | null
-}
-
-export interface IErrorResponse {
-  message: string
 }

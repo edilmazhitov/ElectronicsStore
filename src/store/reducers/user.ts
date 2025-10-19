@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import type { IUser, IErrorResponse, IUserState } from '@/types/userTypes.ts'
+import type { IUser, IUserState } from '@/types/userTypes.ts'
 import axios from 'axios'
+import type { IErrorResponse } from '@/types/reduxTypes'
 
 export const registerUser = createAsyncThunk<
   IUser,

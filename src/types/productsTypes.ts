@@ -1,4 +1,4 @@
-import type { Status } from './userTypes'
+import type { Status } from './reduxTypes'
 
 export interface IProduct {
   title: string

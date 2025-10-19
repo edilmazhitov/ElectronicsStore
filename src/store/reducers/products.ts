@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
-import type { IProduct, IProductState } from '@/types/productsTypes.ts'
-import type { IErrorResponse } from '@/types/userTypes.ts'
+import type { IProduct, IProductState } from '@/types/productsTypes'
+import type { IErrorResponse } from '@/types/reduxTypes'
 
 export const getAllProducts = createAsyncThunk<
   IProduct[],

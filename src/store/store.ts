@@ -6,12 +6,14 @@ import user from './reducers/user'
 import products from './reducers/products'
 import favorites from './reducers/favorites'
 import carts from './reducers/carts'
+import reviews from './reducers/reviews'
 
 const rootReducer = combineReducers({
   user,
   products,
   favorites,
   carts,
+  reviews,
 })
 
 const persistConfig = {
