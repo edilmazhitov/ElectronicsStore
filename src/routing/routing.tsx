@@ -8,6 +8,7 @@ import Login from '@pages/Login/Login'
 import Favorites from '@pages/Favorites/Favorites'
 import Carts from '@pages/Carts/Carts'
 import Reviews from '@pages/Reviews/Reviews'
+import CheckOut from '@pages/CheckOut/CheckOut'
 
 const routes: RouteObject[] = [
   {
@@ -29,6 +30,10 @@ const routes: RouteObject[] = [
       {
         path: 'reviews',
         element: <Reviews />,
+      },
+      {
+        path: 'CheckOut',
+        element: <CheckOut />,
       },
     ],
   },

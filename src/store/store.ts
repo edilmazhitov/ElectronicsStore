@@ -7,6 +7,7 @@ import products from './reducers/products'
 import favorites from './reducers/favorites'
 import carts from './reducers/carts'
 import reviews from './reducers/reviews'
+import orders from './reducers/orders'
 
 const rootReducer = combineReducers({
   user,
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   favorites,
   carts,
   reviews,
+  orders,
 })
 
 const persistConfig = {
