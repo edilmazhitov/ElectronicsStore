@@ -1,0 +1,106 @@
+@use "@abstracts" as *;
+
+.products {
+display: flex;
+flex-wrap: wrap;
+column-gap: fluid(20,10);
+
+    &__block {
+        width: fluid(308,157);
+        height: fluid(428,325);
+        padding: 0 rem(15);
+        border: rem(1) solid var(--color-ligth-gray);
+        border-radius: rem(6    );
+        
+margin-bottom: rem(10);
+
+        &-bottom {
+            margin-top: fluid(10,5);
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+        }
+    }
+
+    &__image {
+        width: fluid(248,127);
+        height: fluid(202,115);
+    }
+
+    &__article {
+        font-size: rem(13);
+        color: var(--color-ligth-gray);
+        margin: fluid(10,5) 0;
+    }
+
+    &__title {
+        color: var(--color-dark-1);
+        margin-bottom: fluid(10,5);
+        @include fluid-text(18,14   )
+    }
+
+    &__price {
+        font-size: fluid(20,18);
+        color: var(--color-dark-blue-3);
+    }
+
+    &__add-to-cart {
+        width: rem(120);
+        height: rem(40);
+        border: none;
+        border-radius: rem(6);
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        padding: 0 fluid(17,10);
+        background-color: var(--color-blue);
+        color: var(--color-light);
+
+        @include laptop-s {
+            width: rem(59);
+        }
+
+        p {
+            font-size: rem(15);
+            font-weight: 550;
+
+            @include laptop-s {
+                display: none;
+            }
+        }
+
+        @include hover {
+                background-color    : var(--color-gray-2); 
+        }
+    }
+
+    &__rigth {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        column-gap: fluid(9,4);
+    }
+
+    &__favorites,
+    &__comparison {
+
+        &-button {
+                width: rem(40);
+        height: rem(40);
+        border-radius: rem(6);
+        border: rem(1) solid var(--color-gray-2);
+        background-color: transparent;
+        
+
+        }
+
+        &-icon {
+            width: rem(17);
+            height: rem(14);
+
+            &-red {
+                background-color: red;
+            }
+        }
+    }
+}

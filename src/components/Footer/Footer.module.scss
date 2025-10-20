@@ -157,4 +157,25 @@
       }
     }
   }
+
+  &__payment {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    &__title {
+      color: #979DA3;
+      font-size: rem(14);
+
+      @include mobile-l {
+        display: none;
+      }
+    }
+
+    &-list {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
 }

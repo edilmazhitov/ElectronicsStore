@@ -25,7 +25,6 @@ const Home = () => {
         <Container>
           <SwiperImage />
         </Container>
-        <Products />
       </section>
       <section className={styles['home-interesting']}>
         <Container>
@@ -101,6 +100,12 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </Container>
+      </section>
+      <section className={styles.products}>
+        <Container>
+          <h2 className={styles.products__title} >Товары</h2>
+          <Products />
         </Container>
       </section>
       <section className={styles.brand}>

@@ -7,7 +7,7 @@ export interface IProduct {
   image: string
   images: string[]
   description: string
-  id?: number | string
+  id?: number
 }
 
 export interface IProductState {

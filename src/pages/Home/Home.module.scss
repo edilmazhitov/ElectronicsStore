@@ -119,6 +119,20 @@
   }
 }
 
+.products {
+
+  &__title {
+        margin-top: fluid(50, 30);
+    color: var(--color-dark-2);
+    font-weight: 700;
+    font-size: rem(33);
+
+    @include laptop {
+      font-size: rem(26);
+    }
+  }
+}
+
 .brand {
   background-color: var(--color-white);
   justify-content: center;
