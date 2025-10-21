@@ -1,0 +1,61 @@
+@use "@abstracts" as *;
+
+.register {
+
+  &__title {
+      @include fluid-text(48,30);
+    margin-top: fluid(68,24);
+    color: var(--color-dark-2);
+  }
+
+  &__form {
+    width: fluid(735,300);
+  }
+  &__top {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    @include laptop {
+      display: block;
+    }
+
+    &-left {}
+    &-rigth {}
+  }
+
+  &__label {
+    margin-top: rem(20);
+    font-size: rem(14);
+    color: var(--color-dark-blue-2);
+    font-weight: 400;
+
+    span {
+      color: red;
+    }
+  }
+
+  &__input {
+    width: fluid(735,300);
+    height: rem(61);
+    border-radius: rem(7);
+    border: rem(1) solid var(--color-dark-blue-3);
+    padding: rem(20) rem(25);
+
+    &-email,
+    &-telephone {
+      width: rem(260);
+      border: rem(1) solid var(--color-dark-blue-3);
+      height: rem(61);    border-radius: rem(7);
+      padding: rem(20) rem(25);
+
+      @include laptop-above {
+        width: rem(210);
+      }
+
+      @include laptop {
+        width: rem(300);
+      }
+    }
+  }
+}
