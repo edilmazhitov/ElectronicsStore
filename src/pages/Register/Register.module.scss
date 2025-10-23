@@ -1,0 +1,92 @@
+@use '@abstracts' as *;
+
+.register {
+  margin: 0 auto;
+  &__title {
+    @include fluid-text(48, 30);
+    color: var(--color-gray-3);
+    margin-bottom: rem(20);
+  }
+
+  &__block {
+  }
+
+  &__form {
+    &-top {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      width: rem(710);
+
+      @include laptop {
+        display: block;
+      }
+    }
+    &-label {
+      margin-top: rem(20);
+
+      span {
+        color: red;
+      }
+    }
+    &-input {
+      height: rem(61);
+      border: rem(1) solid var(--color-dark-2);
+      border-radius: rem(7);
+      width: fluid(735, 300);
+      padding: 0 rem(20);
+      font-size: rem(15);
+
+      &-top {
+        width: rem(320);
+        height: rem(61);
+        padding: 0 rem(20);
+
+        border-radius: rem(7);
+
+        @include laptop {
+          width: rem(438);
+        }
+
+        @include tablet {
+          width: rem(350);
+        }
+
+        @include mobile-l {
+          width: rem(320);
+        }
+
+        @include mobile-s-above {
+          width: rem(300);
+        }
+
+        @include mobile-s {
+          width: rem(300);
+        }
+      }
+    }
+
+    &-button {
+      width: fluid(735, 300);
+      height: rem(64);
+      border-radius: rem(8);
+      border: none;
+      background-color: var(--color-blue);
+      color: var(--color-light);
+      font-size: rem(13);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: rem(3);
+      margin-top: rem(20);
+
+      @include hover {
+        background-color: var(--color-dark-blue);
+        color: var(--color-dark-1);
+      }
+    }
+  }
+}
+
+.error {
+  color: red;
+}
