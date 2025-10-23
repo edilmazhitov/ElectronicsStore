@@ -1,0 +1,87 @@
+@use '@abstracts' as *;
+
+.login {
+  margin: 0 auto;
+  text-align: center;
+
+  &__title {
+    @include fluid-text(48, 30);
+    color: var(--color-gray-3);
+    margin-bottom: rem(20);
+  }
+
+  &__subtitle {
+    color: var(--color-gray-5);
+    margin-bottom: rem(20);
+    font-size: rem(16);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: rem(710);
+    margin: 0 auto;
+
+    @include tablet {
+      width: rem(600);
+    }
+
+    @include mobile-l {
+      width: rem(400);
+    }
+
+    @include mobile-s {
+      width: rem(350);
+    }
+  }
+
+  &__input {
+    height: rem(61);
+    border: rem(1) solid var(--color-dark-2);
+    border-radius: rem(7);
+    width: fluid(735, 300);
+    padding: 0 rem(20);
+    font-size: rem(15);
+    margin-bottom: rem(20);
+
+    &:focus {
+      border-color: var(--color-blue);
+    }
+
+    @include mobile-l {
+      width: rem(320);
+    }
+
+    @include mobile-s {
+      width: rem(300);
+    }
+  }
+
+  &__button {
+    width: fluid(735, 300);
+    height: rem(64);
+    border-radius: rem(8);
+    border: none;
+    background-color: var(--color-blue);
+    color: var(--color-light);
+    font-size: rem(13);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: rem(3);
+    margin-top: rem(20);
+
+    @include hover {
+      background-color: var(--color-dark-blue);
+      color: var(--color-dark-1);
+    }
+
+    @include mobile-s {
+      width: rem(300);
+    }
+  }
+
+  &__block {
+    margin-bottom: rem(20);
+  }
+}

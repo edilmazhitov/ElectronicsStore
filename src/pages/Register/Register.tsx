@@ -5,7 +5,7 @@ import { useAppDispatch } from '@/hooks/reduxHooks.ts'
 import { registerUser } from '@/store/reducers/user.ts'
 import styles from './Register.module.scss'
 import Container from '@mui/material/Container'
-
+import { Link } from 'react-router-dom'
 const Register = () => {
   const [userId, setUserId] = useState<number>(1)
   const {
@@ -208,6 +208,9 @@ const Register = () => {
               Зарегистрироваться
             </button>
           </form>
+          <p>
+            Есть аккаунт?: <Link to="/login">Войти</Link>
+          </p>
         </div>
       </Container>
     </div>
