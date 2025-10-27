@@ -16,7 +16,9 @@
       "price": 12750,
       "count": 100,
       "image": "https://fv5-7.files.fm/thumb_show.php?i=c9fx9zj43n&view&v=1&PHPSESSID=6716a20520b28e4eca0d0d8b5a87d5c68b99e0a0",
-      "images": ["https://fv5-7.files.fm/thumb_show.php?i=c9fx9zj43n&view&v=1&PHPSESSID=6716a20520b28e4eca0d0d8b5a87d5c68b99e0a0"],
+      "images": [
+        "https://fv5-7.files.fm/thumb_show.php?i=c9fx9zj43n&view&v=1&PHPSESSID=6716a20520b28e4eca0d0d8b5a87d5c68b99e0a0"
+      ],
       "description": "description 1",
       "id": 1
     },

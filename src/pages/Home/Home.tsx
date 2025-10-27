@@ -104,7 +104,7 @@ const Home = () => {
       </section>
       <section className={styles.products}>
         <Container>
-          <h2 className={styles.products__title} >Товары</h2>
+          <h2 className={styles.products__title}>Товары</h2>
           <Products />
         </Container>
       </section>
