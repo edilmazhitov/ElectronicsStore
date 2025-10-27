@@ -40,13 +40,14 @@
     height: rem(61);
     border-radius: rem(7);
     border: rem(1) solid var(--color-dark-blue-3);
-    padding: rem(20) rem(25);
+    padding: rem(20) rem(25); 
 
     &-email,
     &-telephone {
       width: rem(260);
       border: rem(1) solid var(--color-dark-blue-3);
-      height: rem(61);    border-radius: rem(7);
+      height: rem(61);
+      border-radius: rem(7);
       padding: rem(20) rem(25);
 
       @include laptop-above {

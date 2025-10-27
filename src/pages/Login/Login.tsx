@@ -2,8 +2,11 @@ import { useAppDispatch } from '@/hooks/reduxHooks.ts'
 import { type SubmitHandler, useForm } from 'react-hook-form'
 import { loginUser } from '@/store/reducers/user.ts'
 import type { IUser } from '@/types/userTypes.ts'
-
+import { GoEye, GoEyeClosed  } from "react-icons/go";
 const Login = () => {
+
+  const [showPassword, setShowPassword] = useState(false)
+
   const { register, handleSubmit } = useForm<IUser>({ mode: 'onBlur' })
 
   const dispatch = useAppDispatch()
@@ -36,9 +39,10 @@ const Login = () => {
           <input
             {...register('password')}
             placeholder="Введите пароль"
-            type={'password'}
+            type={showPassword ? 'text' : 'password'}
             autoComplete="new-password"
           />
+          button
         </div>
         <button type="submit">Войти</button>
       </form>

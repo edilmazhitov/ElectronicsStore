@@ -6,8 +6,13 @@ import { registerUser } from '@/store/reducers/user.ts'
 import styles from "./Register.module.scss"
 import Container from "@components/Container/Container"
 
+import { GoEye, GoEyeClosed  } from "react-icons/go";
+
 const Register = () => {
   const [userId, setUserId] = useState<number>(1)
+  const [showPassword, setShowPassword] = useState<boolean>(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false)
+
   const { register, handleSubmit, getValues } = useForm<IUser>({
     mode: 'onBlur',
   })
@@ -30,6 +35,8 @@ const Register = () => {
     dispatch(registerUser(newUser))
     setUserId(userId + 1)
   }
+
+
 
   return (
     <div className={styles.register}>
@@ -165,10 +172,16 @@ const Register = () => {
                 },
               })}
               placeholder="Придумайте пароль"
-              type={'password'}
+              type={showPassword ? 'text' : 'password'}
               className={styles.register__input}
               autoComplete="new-password"
             />
+
+            <button onClick={() => setShowPassword(!showPassword)}>
+              {
+                showPassword ? <GoEye/> : <GoEyeClosed />
+              }
+          </button>
           </div>
 
           <div className="register__block">
@@ -176,7 +189,8 @@ const Register = () => {
               htmlFor="confirmPassword"
               className={styles.register__label}
             >Повтор пароля <span>*</span>:
-            </label> <br/>
+            </label>
+            <br />
             <input
               {...register('confirmPassword', {
                 required: {
@@ -188,9 +202,13 @@ const Register = () => {
               })}
               placeholder="Повторите пароль"
               className={styles.register__input}
-              type="password"
+              type={showConfirmPassword ? "text" : "password"}
               autoComplete="new-password"
             />
+            <button onClick={() => setShowConfirmPassword(!showConfirmPassword)} className={styles['register__input-show']}>
+              {
+                showConfirmPassword ? <GoEye/> : <GoEyeClosed />
+              } </button>
           </div>
 
           <button type="submit">Зарегистрироваться</button>
