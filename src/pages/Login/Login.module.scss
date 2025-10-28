@@ -36,14 +36,24 @@
     }
   }
 
+  &__inputWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__input {
     height: rem(61);
     border: rem(1) solid var(--color-dark-2);
     border-radius: rem(7);
     width: fluid(735, 300);
-    padding: 0 rem(20);
+    padding: 0 rem(50) 0 rem(20);
     font-size: rem(15);
     margin-bottom: rem(20);
+    outline: none;
+    transition: border-color 0.2s;
 
     &:focus {
       border-color: var(--color-blue);
@@ -55,6 +65,23 @@
 
     @include mobile-s {
       width: rem(300);
+    }
+  }
+
+  &__inputShow {
+    position: absolute;
+    right: rem(15);
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-dark-2);
+    font-size: rem(20);
+    padding: 0;
+
+    &:hover {
+      color: var(--color-blue);
     }
   }
 
@@ -83,5 +110,8 @@
 
   &__block {
     margin-bottom: rem(20);
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }

@@ -2,15 +2,12 @@ import { useAppDispatch } from '@/hooks/reduxHooks.ts'
 import { type SubmitHandler, useForm } from 'react-hook-form'
 import { loginUser } from '@/store/reducers/user.ts'
 import type { IUser } from '@/types/userTypes.ts'
-<<<<<<< HEAD
-import { GoEye, GoEyeClosed  } from "react-icons/go";
-=======
 import styles from './Login.module.scss'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { GoEye, GoEyeClosed } from 'react-icons/go'
 
->>>>>>> 47fa0883093261030ef76832e5049cefec233bc0
 const Login = () => {
-
   const [showPassword, setShowPassword] = useState(false)
 
   const { register, handleSubmit } = useForm<IUser>({ mode: 'onBlur' })
@@ -47,7 +44,12 @@ const Login = () => {
             autoComplete="new-password"
             className={styles.login__input}
           />
-          button
+          <button
+            onClick={() => setShowPassword(!showPassword)}
+            className={styles['register__input-show']}
+          >
+            {showPassword ? <GoEye /> : <GoEyeClosed />}{' '}
+          </button>
         </div>
         <button type="submit" className={styles.login__button}>
           Войти

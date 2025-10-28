@@ -1,4 +1,4 @@
-@use "@abstracts" as *;
+@use '@abstracts' as *;
 * {
   list-style-type: none;
   text-decoration: none;
@@ -24,7 +24,7 @@
   --color-light: #ffffff;
 
   --color-white: #f9fafb;
-  --color-white-2: #EBEEF0;
+  --color-white-2: #ebeef0;
   --border-form: rem(1) solid var(--color-dark-blue-3);
 }
 
