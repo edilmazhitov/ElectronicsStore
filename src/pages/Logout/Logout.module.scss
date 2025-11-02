@@ -1,0 +1,33 @@
+@use "@/styles/abstracts" as *;
+
+.logout {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: rem(3);
+  margin-top: rem(20);
+  color: var(--color-dark-blue);
+}
+
+.button {
+  margin: rem(40) 0;
+  width: rem(200);
+  height: rem(50);
+  color: var(--color-ligth-blue);
+  background-color: var(--color-dark-2);
+  border-radius: rem(8);
+  border: rem(1) solid var(--color-ligth-blue);
+
+
+  @include hover {
+    background-color: var(--color-ligth-blue);
+    color: var(--color-dark-2);
+    border: rem(1) solid var(--color-dark-2);
+  }
+}

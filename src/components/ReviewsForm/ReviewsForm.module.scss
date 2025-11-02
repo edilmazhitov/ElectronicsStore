@@ -1,0 +1,17 @@
+@use '@/styles/abstracts' as *;
+
+.reviews {
+  &__label {
+    span {
+      color: red;
+    }
+  }
+
+  &__textarea {
+    width: rem(720);
+    height: rem(90);
+    border: rem(1) solid var(--color-gray-4);
+    border-radius: rem(8);
+    padding: rem(15) rem(10);
+  }
+}

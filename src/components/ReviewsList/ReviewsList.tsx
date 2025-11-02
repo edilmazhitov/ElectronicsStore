@@ -1,9 +1,17 @@
-import { useAppSelector } from '@/hooks/reduxHooks'
 import Rating from '@mui/material/Rating'
 import Stack from '@mui/material/Stack'
+import type { FC } from "react"
+import type { IReviews } from "@/types/reviewsTypes"
 
-const ReviewsList = () => {
-  const { data } = useAppSelector((state) => state.reviews)
+interface IReviewsList {
+  data: IReviews[]
+}
+
+const ReviewsList: FC<IReviewsList> = (props) => {
+
+  const {
+    data
+  } = props
 
   return (
     <>

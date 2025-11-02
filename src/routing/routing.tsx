@@ -9,6 +9,7 @@ import Favorites from '@pages/Favorites/Favorites'
 import Carts from '@pages/Carts/Carts'
 import Reviews from '@pages/Reviews/Reviews'
 import CheckOut from '@pages/CheckOut/CheckOut'
+import LogOut from "@pages/Logout/LogOut.tsx"
 
 const routes: RouteObject[] = [
   {
@@ -34,6 +35,10 @@ const routes: RouteObject[] = [
       {
         path: 'CheckOut',
         element: <CheckOut />,
+      },
+      {
+        path: 'logout',
+        element: <LogOut />,
       },
     ],
   },

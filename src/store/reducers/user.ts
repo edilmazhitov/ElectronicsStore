@@ -25,7 +25,7 @@ export const registerUser = createAsyncThunk<
 
 export const loginUser = createAsyncThunk<
   IUser,
-  IUser,
+  Pick<IUser, "email" | "password">,
   { rejectValue: IErrorResponse }
 >('post/loginUser', async (arg, { rejectWithValue }) => {
   try {

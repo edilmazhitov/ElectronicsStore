@@ -5,6 +5,7 @@ import { FiBarChart2, FiShoppingCart } from 'react-icons/fi'
 import { MdFavoriteBorder } from 'react-icons/md'
 import type { IconType } from 'react-icons'
 import { Link } from 'react-router-dom'
+import { useAppSelector } from '@/hooks/reduxHooks'
 
 interface UserMenuListType {
   to: string
@@ -12,35 +13,40 @@ interface UserMenuListType {
   icon: IconType
 }
 
-const userMenuList: UserMenuListType[] = [
-  {
-    to: '/',
-    name: 'Все акции',
-    icon: SlPresent,
-  },
-  {
-    to: '/',
-    name: 'Войти',
-    icon: LuSquareUser,
-  },
-  {
-    to: '/',
-    name: 'Сравнение',
-    icon: FiBarChart2,
-  },
-  {
-    to: '/',
-    name: 'Избранное',
-    icon: MdFavoriteBorder,
-  },
-  {
-    to: '/',
-    name: 'Корзина',
-    icon: FiShoppingCart,
-  },
-]
+
 
 const UserMenu = () => {
+
+  const  { data } = useAppSelector((state) => state.user)
+
+  const userMenuList: UserMenuListType[] = [
+    {
+      to: '/',
+      name: 'Все акции',
+      icon: SlPresent,
+    },
+    {
+      to: data ? '/logout' : '/login',
+      name: data ? 'Выйти' : 'Войти',
+      icon: LuSquareUser,
+    },
+    {
+      to: '/reviews',
+      name: 'Отзывы',
+      icon: FiBarChart2,
+    },
+    {
+      to: '/favorites',
+      name: 'Избранное',
+      icon: MdFavoriteBorder,
+    },
+    {
+      to: '/carts',
+      name: 'Корзина',
+      icon: FiShoppingCart,
+    },
+  ]
+
   return (
     <ul className={styles['user-menu__list']}>
       {userMenuList.map((item) => {

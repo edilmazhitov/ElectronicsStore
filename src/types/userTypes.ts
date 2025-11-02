@@ -11,6 +11,15 @@ export interface IUser {
   id?: number
 }
 
+export interface IRegisterUser {
+  email: string
+  fullName: string
+  region: string
+  phoneNumber: string
+  password: string
+  confirmPassword: string
+}
+
 export interface IUserState {
   data: null | IUser
   status: Status

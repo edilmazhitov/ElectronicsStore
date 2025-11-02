@@ -14,7 +14,7 @@ const carts = createSlice({
 
       if (state.data.some((item) => item.id === productId)) {
         state.data = state.data.map((item) =>
-          item.id === productId ? { ...item, count: item.count + 1 } : item,
+          item.id === productId ? { ...item, count: item.count + 1 } : item
         )
       } else {
         state.data.push({ ...action.payload, count: 1 })
@@ -24,7 +24,7 @@ const carts = createSlice({
       state.data = state.data.map((item) =>
         item.id === action.payload.id
           ? { ...item, count: action.payload.count }
-          : item,
+          : item
       )
     },
     removeToCart: (state, action: PayloadAction<IProduct>) => {

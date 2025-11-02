@@ -1,5 +1,5 @@
 // import ContactDetails from '../ContactDetails/ContactDetails'
-import Container from '../Container/Container'
+import Container from '@components/ui/Container/Container'
 // import Navbar from '../NavbarBlock/NavbarBlock'
 import styles from './Header.module.scss'
 import UserMenu from '../UserMenu/UserMenu.tsx'

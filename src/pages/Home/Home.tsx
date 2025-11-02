@@ -1,6 +1,6 @@
 import styles from './Home.module.scss'
 
-import Container from '@/components/Container/Container.tsx'
+import Container from '@components/ui/Container/Container.tsx'
 import SwiperImage from '@/components/SwiperImage/SwiperImage.tsx'
 
 import HomeNavbar from '@/components/HomeNavbar/HomeNavbar.tsx'

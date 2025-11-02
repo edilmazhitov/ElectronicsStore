@@ -1,14 +1,14 @@
-import { RouterProvider } from 'react-router-dom'
-import { router } from './routing/routing.tsx'
 import './styles/styles.scss'
-import { useAppDispatch } from '@/hooks/reduxHooks.ts'
-import { useEffect } from 'react'
-import { getAllProducts } from '@/store/reducers/products.ts'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './routing/routing'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 
-const App = () => {
+function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <ToastContainer position="bottom-center" autoClose={5000} />
     </>
   )
 }

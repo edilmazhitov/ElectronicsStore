@@ -1,4 +1,4 @@
-import Container from '../Container/Container'
+import Container from '@components/ui/Container/Container'
 import styles from './Footer.module.scss'
 import { Link } from 'react-router-dom'
 import type { BankListT, NavbarT } from '@types/navbarTypes.ts'

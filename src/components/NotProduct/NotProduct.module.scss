@@ -1,0 +1,45 @@
+
+@use "@abstracts" as *;
+.not-product {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align:  center;
+
+  &__img {
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: rem(20) 0;
+    color: var(--color-gray-3);
+    font-size: rem(20);
+    font-weight: 550;
+  }
+
+  &__text {
+    color: var(--color-gray-4);
+    font-size: rem(15);
+    margin-bottom: rem(20);
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__go-to-catalog {
+    width: rem(203);
+    height: rem(67);
+    border: none;
+    border-radius: rem(8);
+    background-color: var(--color-ligth-blue);
+    color: var(--color-light);
+    text-transform: uppercase;
+    font-size: rem(13);
+
+    @include hover {
+      background-color: var(--color-dark-blue);
+      color: var(--color-ligth-gray);
+    }
+  }
+}

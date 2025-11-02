@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import type { IReviews } from '@/types/reviewsTypes.ts'
 import { addReviews } from '@/store/reducers/reviews.ts'
+import styles from './ReviewsForm.module.scss'
 
 const ReviewsForm = () => {
   const [value, setValue] = useState<number>(1)
@@ -21,7 +22,7 @@ const ReviewsForm = () => {
   } = useForm<IReviews>({ mode: 'onBlur' })
 
   const addNewReview = (
-    formData: Omit<IReviews, 'id' | 'date' | 'rating' | 'userName'>,
+    formData: Omit<IReviews, 'id' | 'date' | 'rating' | 'userName'>
   ) => {
     const newReview: IReviews = {
       ...formData,
@@ -37,10 +38,11 @@ const ReviewsForm = () => {
   }
 
   return (
-    <>
-      <h2>Отзывы</h2>
-
-      <form className="reviews__form" onSubmit={handleSubmit(addNewReview)}>
+    <div className={styles.reviews}>
+      <form
+        className={styles.reviews__form}
+        onSubmit={handleSubmit(addNewReview)}
+      >
         <Stack spacing={1}>
           <Rating
             name="user-rating"
@@ -51,21 +53,24 @@ const ReviewsForm = () => {
             }}
           />
         </Stack>
-
+        <label htmlFor="textarea-reviews" className={styles.reviews__label}>
+          Текст отзыва: <span>*</span>
+        </label>{' '}
+        <br />
         <textarea
-          className="reviews__textarea"
+          className={styles.reviews__textarea}
           {...register('text', { required: 'Отзыв обязателен' })}
           cols={30}
           rows={10}
           placeholder="Напишите свой отзыв..."
+          id="textarea-reviews"
         />
         {errors.text && <p className="reviews__error">{errors.text.message}</p>}
-
-        <button className="reviews__btn" type="submit">
+        <button className={styles.reviews__btn} type="submit">
           Оставить отзыв
         </button>
       </form>
-    </>
+    </div>
   )
 }
 

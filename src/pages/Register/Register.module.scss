@@ -7,16 +7,9 @@
     color: var(--color-dark-2);
     text-align: center;
   }
-
-  &__block {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-
   &__form {
     width: fluid(735, 300);
+    margin: 0 auto;
 
     &-button {
       width: fluid(735, 300);
@@ -64,26 +57,24 @@
     border-radius: rem(7);
     border: rem(1) solid var(--color-dark-blue-3);
     padding: rem(20) rem(25);
-
-    &-email,
-    &-telephone {
-      width: rem(260);
-      border: rem(1) solid var(--color-dark-blue-3);
-      height: rem(61);
-      border-radius: rem(7);
-      padding: rem(20) rem(25);
-
-      @include laptop-above {
-        width: rem(210);
-      }
-
-      @include laptop {
-        width: rem(300);
-      }
+    position: relative;
+    &:focus {
+      border-color: var(--color-blue);
+    }
+    &-show {
+      position: absolute;
+      transform: translate(-40px, 14px);
+      border: none;
+      background: transparent;
     }
   }
 }
 
 .error {
   color: red;
+}
+
+.login {
+  margin-top: rem(10);
+  text-align: center;
 }

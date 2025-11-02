@@ -4,6 +4,7 @@ import { newOrder } from '@/store/reducers/orders'
 import { useNavigate } from 'react-router-dom'
 import type { IOrder, IUserInfo } from '@/types/orderTypes'
 import { clearAllCarts } from '@/store/reducers/carts.ts'
+import { Input } from "@components/ui"
 
 const CheckOut = () => {
   const user = useAppSelector((state) => state.user)
@@ -21,7 +22,7 @@ const CheckOut = () => {
   })
 
   const cartsItems = products.data?.filter((product) =>
-    carts.data.some((cart) => cart.id === product.id),
+    carts.data.some((cart) => cart.id === product.id)
   )
 
   const totalPrice = (cartsItems ?? []).reduce((acc, product) => {
@@ -63,9 +64,9 @@ const CheckOut = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register('fullName')} placeholder="Имя и фамилия" required />
-      <input {...register('email')} type="email" placeholder="Email" required />
-      <input {...register('address')} placeholder="Адрес" required />
+      <Input register={register('fullName')} placeholder="Имя и фамилия" required />
+      <Input register={register('email')} type="email" placeholder="Email" required />
+      <Input register={register('address')} placeholder="Адрес" required />
       <p>Итого: {totalPrice} сом</p>
       <button type="submit">Оформить заказ</button>
     </form>

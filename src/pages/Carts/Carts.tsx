@@ -2,6 +2,9 @@ import { useAppDispatch, useAppSelector } from '@/hooks/reduxHooks'
 import type { IProduct } from '@/types/productsTypes'
 import { removeToCart } from '@/store/reducers/carts'
 import { useNavigate } from 'react-router-dom'
+import styles from "./Carts.module.scss"
+import NotProduct from "@components/NotProduct/NotProduct.tsx";
+import { Container } from "@components/ui";
 
 const Carts = () => {
   const dispatch = useAppDispatch()
@@ -26,36 +29,43 @@ const Carts = () => {
   }, 0)
 
   return (
-    <>
-      {cartsList && cartsList.length > 0 ? (
-        cartsList.map((item) => (
-          <div key={item.id}>
-            <h2>{item.title}</h2>
-            <p>PRICE: {item.price}</p>
-            <button onClick={() => removeCart(item)}>Удалить</button>
-          </div>
-        ))
-      ) : (
-        <h2>NO PRODUCTS CARTS</h2>
-      )}
+    <section className={styles.cart}>
+     <Container>
+       <h1 className={styles.cart__title}>Корзина товаров</h1>
+       {cartsList && cartsList.length > 0 ? (
+         cartsList.map((item) => (
 
-      <h2>TOTAL PRICE: ${totalPrice.toLocaleString('ru-RU')}</h2>
-      <span
-        onClick={() => {
-          if (carts.data.length === 0) {
-            alert(
-              'Корзина пуста. Добавьте товары в корзину для оформления заказа.',
-            )
-          } else if (status === 'success') {
-            navigate('/CheckOut')
-          } else {
-            alert('Войдите в аккаунт чтобы заказать товары')
-          }
-        }}
-      >
+           <div>
+             <div key={item.id}>
+               <h2>{item.title}</h2>
+               <p>PRICE: {item.price}</p>
+               <button onClick={() => removeCart(item)}>Удалить</button>
+             </div>
+
+             <h2>TOTAL PRICE: ${totalPrice.toLocaleString('ru-RU')}</h2>
+             <span
+               onClick={() => {
+                 if (status === 'success') {
+                   navigate('/CheckOut')
+                 } else {
+                   alert('Войдите в аккаунт чтобы заказать товары')
+                 }
+               }}
+             >
         <button>Заказать</button>
       </span>
-    </>
+
+           </div>
+
+         ))
+       ) : (
+
+         <NotProduct />
+       )}
+
+     </Container>
+
+    </section>
   )
 }
 

@@ -2,11 +2,11 @@
   "users": [
     {
       "email": "zusupovaerkinai@gmail.com",
-      "password": "$2a$10$rLlnqcS7AceFslxMkfM5oeRvnALrjVIf79/AgDGrz3IrlvThdqqvm",
+      "password": "$2a$10$rtlB8zxmZEGIbr2LhFMl3OoPaI5iq72s67MUVAyOMhFO2TBqpqfPO",
       "id": 1,
       "fullName": "Эдил Мажитов",
       "region": "Moscow",
-      "phoneNumber": "666655555",
+      "phoneNumber": "+7 (777) 777 77 44",
       "balance": 0
     }
   ],
@@ -50,64 +50,34 @@
       "id": 4
     }
   ],
-  "reviews": [],
-  "orders": [
+  "reviews": [
     {
-      "id": 1760877903207,
-      "user": {
-        "fullName": "Эдил Мажитов",
-        "email": "zusupovaerkinai@gmail.com",
-        "address": "BLA BLA BLA"
-      },
-      "items": [
-        {
-          "id": "1",
-          "title": "title 1",
-          "count": 1,
-          "price": 500,
-          "total": 500
-        },
-        {
-          "id": "2",
-          "title": "title 2",
-          "count": 1,
-          "price": 1000,
-          "total": 1000
-        }
-      ],
-      "totalPrice": 1500
+      "text": "aaaa",
+      "rating": 5,
+      "userName": "Эдил Мажитов",
+      "id": 1761668089946,
+      "date": "28.10.2025, 22:14:49"
     },
     {
-      "id": 1760879187579,
-      "user": {
-        "fullName": "Эдил Мажитов",
-        "email": "zusupovaerkinai@gmail.com",
-        "address": "aaa"
-      },
-      "items": [
-        {
-          "id": 1,
-          "title": "title 1",
-          "count": 2,
-          "price": 500,
-          "total": 1000
-        },
-        {
-          "id": 2,
-          "title": "title 2",
-          "count": 2,
-          "price": 1000,
-          "total": 2000
-        },
-        {
-          "id": 3,
-          "title": "title 3",
-          "count": 1,
-          "price": 2000,
-          "total": 2000
-        }
-      ],
-      "totalPrice": 5000
+      "text": "aaaaaaaaa",
+      "rating": 1,
+      "userName": "Эдил Мажитов",
+      "id": 1761668093358,
+      "date": "28.10.2025, 22:14:53"
+    },
+    {
+      "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "rating": 5,
+      "userName": "Эдил Мажитов",
+      "id": 1761668519999,
+      "date": "28.10.2025, 22:21:59"
+    },
+    {
+      "text": "zxx",
+      "rating": 1,
+      "userName": "Аноним",
+      "id": 1762000188051,
+      "date": "01.11.2025, 18:29:48"
     }
   ]
 }
