@@ -14,7 +14,7 @@ const carts = createSlice({
       if (productId === undefined) return
 
       const existingItem = state.data.find(
-        (item) => item.itemData?.id === productId
+        (item) => item.itemData.id === productId
       )
 
       if (existingItem) {
@@ -25,15 +25,15 @@ const carts = createSlice({
     },
     minusOneProducts: (state, action: PayloadAction<IProduct>) => {
       const productId = action.payload.id
-
       const existingItem = state.data.find(
-        (item) => item.itemData?.id === productId
+        (item) => item.itemData.id === productId
       )
-
-      if (existingItem.count > 1) {
-        existingItem.count = existingItem.count - 1
+    
+      if (existingItem && existingItem.count > 1) {
+        existingItem.count -= 1
       }
     },
+    
     updateCartItem: (
       state,
       action: PayloadAction<{ id: number; count: number }>

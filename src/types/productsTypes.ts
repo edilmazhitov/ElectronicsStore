@@ -22,7 +22,7 @@ export type IFavorites = {
 
 export interface ICartItem {
   itemData: {
-    id: string
+    id: number
     title: string
     description: string
     image: string
