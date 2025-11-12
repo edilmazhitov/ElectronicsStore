@@ -1,0 +1,45 @@
+@use '@abstracts' as *;
+
+.carts {
+  &__total {
+    color: var(--color-light-blue);
+
+    b {
+      color: var(--color-dark-blue-3);
+    }
+
+    span {
+      color: var(--color-dark-blue-3);
+    }
+  }
+
+  &__block {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    column-gap: rem(10);
+  }
+
+  &__bottom {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  &__button {
+    margin-top: rem(20);
+    width: rem(200);
+    height: rem(50);
+    font-size: rem(12);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 10%;
+    background: var(-color-dark-blue-3);
+    border-radius: rem(16);
+    border: rem(1) solid var(--color-dark-blue-3);
+
+    @include hover {
+      color: var(--color-dark-blue-3);
+    }
+  }
+}

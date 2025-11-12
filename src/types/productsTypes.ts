@@ -22,18 +22,15 @@ export type IFavorites = {
 
 export interface ICartItem {
   itemData: {
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-    price: number;
-  };
-  count: number;
+    id: string
+    title: string
+    description: string
+    image: string
+    price: number
+  }
+  count: number
 }
-
 
 export interface ICartItemState {
   data: ICartItem[]
 }
-
-

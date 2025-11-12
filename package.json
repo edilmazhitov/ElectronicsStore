@@ -25,6 +25,7 @@
     "axios": "^1.12.2",
     "classnames": "^2.5.1",
     "concurrently": "^9.2.1",
+    "framer-motion": "^12.23.24",
     "json-server": "0.17.4",
     "json-server-auth": "^2.1.0",
     "react": "^19.1.1",

@@ -1,13 +1,11 @@
-import styles from "./NotProduct.module.scss"
-import { useNavigate } from "react-router-dom";
+import styles from './NotProduct.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 const NotProduct = () => {
-
-
   const navigate = useNavigate()
 
   const onGoToCatalog = () => {
-    navigate("/")
+    navigate('/')
   }
 
   return (
@@ -24,11 +22,14 @@ const NotProduct = () => {
         У вас пока нет товаров в корзине. <br />
         На странице <span>"Каталог"</span> вы найдете много интересных товаров.
       </p>
-      <button onClick={onGoToCatalog}  className={styles['not-product__go-to-catalog']}>
+      <button
+        onClick={onGoToCatalog}
+        className={styles['not-product__go-to-catalog']}
+      >
         Перейти в главную страницу
       </button>
     </div>
-  );
-};
+  )
+}
 
 export default NotProduct

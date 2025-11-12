@@ -13,11 +13,8 @@ interface UserMenuListType {
   icon: IconType
 }
 
-
-
 const UserMenu = () => {
-
-  const  { data } = useAppSelector((state) => state.user)
+  const { data } = useAppSelector((state) => state.user)
 
   const userMenuList: UserMenuListType[] = [
     {

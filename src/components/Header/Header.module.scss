@@ -1,6 +1,7 @@
 @use '@abstracts' as *;
 
 .header {
+  padding-top: rem(10);
   &__logo {
     width: fluid(215, 159);
     height: fluid(54, 40);

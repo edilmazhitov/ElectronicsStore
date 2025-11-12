@@ -15,13 +15,6 @@ export const registerSchema = yup.object({
     )
     .min(10, 'Минимум 10 символов'),
   region: yup.string().required('Регион обязателен'),
-  phoneNumber: yup
-    .string()
-    .required('Номер обязателен')
-    .matches(
-      /^\+7\s?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/,
-      'Введите корректный номер в формате +7 (XXX) XXX-XX-XX'
-    ),
   password: yup
     .string()
     .required('Пароль обязателен')

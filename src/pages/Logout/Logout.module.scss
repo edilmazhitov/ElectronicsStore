@@ -1,4 +1,4 @@
-@use "@/styles/abstracts" as *;
+@use '@/styles/abstracts' as *;
 
 .logout {
   justify-content: center;
@@ -23,7 +23,6 @@
   background-color: var(--color-dark-2);
   border-radius: rem(8);
   border: rem(1) solid var(--color-ligth-blue);
-
 
   @include hover {
     background-color: var(--color-ligth-blue);

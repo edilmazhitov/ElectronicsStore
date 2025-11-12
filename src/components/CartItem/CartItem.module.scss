@@ -1,4 +1,4 @@
-@use "@abstracts" as *;
+@use '@abstracts' as *;
 
 .cart {
   justify-content: space-between;
@@ -52,6 +52,10 @@
     &-text {
       color: var(--color-dark-blue-2);
     }
+  }
 
+  &__delete {
+    background: transparent;
+    border: none;
   }
 }

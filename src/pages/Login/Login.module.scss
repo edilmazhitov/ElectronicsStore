@@ -68,12 +68,10 @@
 
     &-show {
       position: absolute;
-      transform: translate(fluid(350,130), rem(16));
+      transform: translate(fluid(350, 130), rem(16));
       border: none;
       background: transparent;
     }
-
-
   }
 
   &__inputShow {

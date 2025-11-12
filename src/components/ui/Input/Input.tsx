@@ -22,7 +22,7 @@ const Input: FC<InputT> = (props) => {
     placeholder = '',
     autoComplete = '',
     label,
-    required= true,
+    required = true,
     register,
   } = props
 
@@ -33,7 +33,6 @@ const Input: FC<InputT> = (props) => {
           <label htmlFor={id} className={cn(labelClassName)}>
             {label}
           </label>
-          <br />
         </>
       )}
       <input

@@ -1,14 +1,12 @@
 import ReviewsForm from '@components/ReviewsForm/ReviewsForm'
 import ReviewsList from '@components/ReviewsList/ReviewsList'
-import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
-import { clearReviewsState, getAllReviews } from "@/store/reducers/reviews.ts";
-import styles from "./Reviews.module.scss"
-import { Container } from "@components/ui";
-
+import { useEffect } from 'react'
+import { useAppDispatch, useAppSelector } from '@/hooks/reduxHooks'
+import { clearReviewsState, getAllReviews } from '@/store/reducers/reviews.ts'
+import styles from './Reviews.module.scss'
+import { Container } from '@components/ui'
 
 const Reviews = () => {
-
   const dispatch = useAppDispatch()
   const { data } = useAppSelector((state) => state.reviews)
 
@@ -18,7 +16,7 @@ const Reviews = () => {
     return () => {
       dispatch(clearReviewsState())
     }
-  }, [dispatch]);
+  }, [dispatch])
 
   return (
     <Container>

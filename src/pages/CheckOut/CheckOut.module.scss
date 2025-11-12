@@ -1,0 +1,112 @@
+@use '@abstracts' as *;
+
+.check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(40) 0;
+  gap: rem(24);
+
+  &__title {
+    color: var(--color-blue);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: rem(28);
+    margin-bottom: rem(24);
+    letter-spacing: rem(1);
+  }
+
+  &__block {
+    justify-content: center;
+    display: flex;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__input {
+    margin-bottom: rem(10);
+    width: rem(500);
+    height: rem(50);
+    padding: rem(12) rem(16);
+    border-radius: rem(8);
+    border: rem(1) solid var(--color-blue);
+    background: var(--color-white);
+    font-size: rem(16);
+    color: var(--color-dark-2);
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+    display: flex;
+    &:focus {
+      border-color: var(--color-dark-blue);
+      box-shadow: 0 0 rem(6) rgba(0, 115, 230, 0.3);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--color-gray);
+    }
+  }
+
+  button {
+    background: var(--color-blue);
+    color: var(--color-white);
+    font-weight: 600;
+    border: none;
+    border-radius: rem(8);
+    padding: rem(12) rem(24);
+    cursor: pointer;
+    transition:
+      background 0.3s ease,
+      transform 0.2s ease;
+    text-transform: uppercase;
+    font-size: rem(16);
+    letter-spacing: rem(0.5);
+
+    &:hover {
+      background: var(--color-dark-blue);
+      transform: scale(1.03);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  p {
+    font-weight: 600;
+    font-size: rem(18);
+    color: var(--color-dark-2);
+    margin-top: rem(10);
+    text-align: center;
+  }
+
+  &__button {
+    margin-top: rem(20);
+    width: rem(200);
+    height: rem(50);
+    font-size: rem(12);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 10%;
+    background: var(-color-dark-blue-3);
+    border-radius: rem(16);
+    border: rem(1) solid var(--color-dark-blue-3);
+    justify-content: center;
+
+    @include hover {
+      color: var(--color-dark-blue-3);
+    }
+  }
+}
+
+.required {
+  color: red;
+  font-weight: 700;
+}

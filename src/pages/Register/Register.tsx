@@ -9,20 +9,20 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Input, Container } from '@components/ui'
 import { GoEye, GoEyeClosed } from 'react-icons/go'
 import { registerSchema } from './registerSchema'
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify'
 
 const Register = () => {
   const [userId, setUserId] = useState<number>(1)
   const [showPassword, setShowPassword] = useState<boolean>(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false)
-  const {  status } = useAppSelector((state) => state.user)
+  const { status } = useAppSelector((state) => state.user)
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (status === "success") {
+    if (status === 'success') {
       navigate('/')
-      toast.success("Вы авторизованы!", {autoClose: 5000})
+      toast.success('Вы авторизованы!', { autoClose: 5000 })
     }
   }, [status])
 
@@ -82,7 +82,7 @@ const Register = () => {
             placeholder="Введите Фамилия и Имя"
             label={
               <>
-                Фамилия и Имя <span className={styles.required}>*</span>:
+                Имя и Фамилия <span className={styles.required}>*</span>:
               </>
             }
             className={styles.register__input}

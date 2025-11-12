@@ -1,10 +1,9 @@
-
-@use "@abstracts" as *;
+@use '@abstracts' as *;
 .not-product {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  text-align:  center;
+  text-align: center;
 
   &__img {
     margin: 0 auto;

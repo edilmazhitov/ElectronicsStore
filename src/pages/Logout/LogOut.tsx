@@ -1,11 +1,10 @@
-import { Container } from "@components/ui"
+import { Container } from '@components/ui'
 
-import styles from "./Logout.module.scss"
-import { logOut } from "@/store/reducers/user";
-import { useAppDispatch } from "@/hooks/reduxHooks";
+import styles from './Logout.module.scss'
+import { logOut } from '@/store/reducers/user'
+import { useAppDispatch } from '@/hooks/reduxHooks'
 
 const LogOut = () => {
-
   const dispatch = useAppDispatch()
 
   const onLogOut = () => dispatch(logOut())
@@ -19,7 +18,7 @@ const LogOut = () => {
         </button>
       </Container>
     </div>
-  );
-};
+  )
+}
 
 export default LogOut

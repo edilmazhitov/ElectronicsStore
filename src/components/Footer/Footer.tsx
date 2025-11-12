@@ -166,79 +166,79 @@ const Footer = () => {
 
           <button className={styles.footer__button}>Заказать звонок</button>
         </div>
-        <div className={styles.footer__line} />
-        <div className={styles.footer__block}>
-          <div className={styles.footer__information}>
-            <h2 className={styles['footer___information-title']}>Информация</h2>
-            <ul className={styles['footer__information-list']}>
-              {footerInformationLinkList.map((link) => (
-                <li
-                  className={styles['footer__information-item']}
-                  key={link.name}
-                >
-                  <Link
-                    to={link.to}
-                    className={styles['footer__information-link']}
+        {/* <div className={styles.footer__line} />
+          <div className={styles.footer__block}>
+            <div className={styles.footer__information}>
+              <h2 className={styles['footer___information-title']}>Информация</h2>
+              <ul className={styles['footer__information-list']}>
+                {footerInformationLinkList.map((link) => (
+                  <li
+                    className={styles['footer__information-item']}
+                    key={link.name}
                   >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                    <Link
+                      to={link.to}
+                      className={styles['footer__information-link']}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className={styles.footer__catalog}>
+              <h2 className={styles['footer__catalog-title']}>Каталог</h2>
+              <ul className={styles['footer__catalog-list']}>
+                {footerCatalogLinkList.map((link) => (
+                  <li className={styles['footer__catalog-item']} key={link.name}>
+                    <Link to={link.to} className={styles['footer__catalog-link']}>
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className={styles.footer__catalog}>
-            <h2 className={styles['footer__catalog-title']}>Каталог</h2>
-            <ul className={styles['footer__catalog-list']}>
-              {footerCatalogLinkList.map((link) => (
-                <li className={styles['footer__catalog-item']} key={link.name}>
-                  <Link to={link.to} className={styles['footer__catalog-link']}>
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div className={styles.footer__line} />
-        <div className={styles.footer__payment}>
-          <h2>
-            Мы принимаем <br />к оплате:
-          </h2>
-          <ul className={styles['footer__payment-list']}>
-            {bankList.map((bank) => (
-              <li key={bank.name} className={styles['footer__payment-item']}>
-                <img
-                  className={styles['footer__payment-images']}
-                  src={bank.images}
-                  alt={bank.name}
-                  width=""
-                  height=""
-                />
-              </li>
-            ))}
-          </ul>
-          <form action="" className={styles.footer__form}>
-            <h2 className={styles['footer__form-title']}>
-              {' '}
-              Подпишитесь на рассылку <br />и будьте в курсе!
+          <div className={styles.footer__line} />
+          <div className={styles.footer__payment}>
+            <h2>
+              Мы принимаем <br />к оплате:
             </h2>
-            <label htmlFor="input">
-              <input
-                className={styles['footer__form-input']}
-                id="input"
-                name=""
-                type="email"
-                placeholder="Ваш email"
-              />
-            </label>
-            <button type="submit" className={styles['footer__form-button']}>
-              <GoPaperAirplane />
-            </button>
-          </form>
-        </div>
-        <div className={styles.footer__line} />
-        <div className={styles.footer__bottom}>
-          <h3 className={styles['footer__bottom-licences']}>
+            <ul className={styles['footer__payment-list']}>
+              {bankList.map((bank) => (
+                <li key={bank.name} className={styles['footer__payment-item']}>
+                  <img
+                    className={styles['footer__payment-images']}
+                    src={bank.images}
+                    alt={bank.name}
+                    width=""
+                    height=""
+                  />
+                </li>
+              ))}
+            </ul>
+            <form action="" className={styles.footer__form}>
+              <h2 className={styles['footer__form-title']}>
+                {' '}
+                Подпишитесь на рассылку <br />и будьте в курсе!
+              </h2>
+              <label htmlFor="input">
+                <input
+                  className={styles['footer__form-input']}
+                  id="input"
+                  name=""
+                  type="email"
+                  placeholder="Ваш email"
+                />
+              </label>
+              <button type="submit" className={styles['footer__form-button']}>
+                <GoPaperAirplane />
+              </button>
+            </form>
+          </div>
+          <div className={styles.footer__line} /> */}
+        {/* <div className={styles.footer__bottom}>  */}
+        {/* <h3 className={styles['footer__bottom-licences']}>
             © 2003-2023 Интернет-магазин ООО «Стройоптторг» р/с
             40702810360000102415 <br />в Ставропольское отделение №5230 ПАО
             Сбербанк, БИК 040702615
@@ -269,8 +269,8 @@ const Footer = () => {
           </svg>
           <Link className={styles['footer__bottom-link']} to="/">
             Политика конфиденциальности
-          </Link>
-        </div>
+          </Link> */}
+        {/* </div> */}
       </Container>
     </footer>
   )

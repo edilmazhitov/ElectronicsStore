@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "email": "zusupovaerkinai@gmail.com",
+      "email": "zusupovasserkinai@gmail.com",
       "password": "$2a$10$rtlB8zxmZEGIbr2LhFMl3OoPaI5iq72s67MUVAyOMhFO2TBqpqfPO",
       "id": 1,
       "fullName": "Эдил Мажитов",
@@ -16,6 +16,15 @@
       "fullName": "Эдил Мажитов",
       "region": "Moscow",
       "phoneNumber": "+7 (777) 777 77 44",
+      "balance": 0
+    },
+    {
+      "email": "zusupovaerkinai@gmail.com",
+      "password": "$2a$10$7GR8OpzaNwxKgV9.QsdIHOz5JkehT4esbLxr80PjX7rdTxhz0o2na",
+      "id": 3,
+      "fullName": "Эдил Мажитов",
+      "region": "Манас",
+      "phoneNumber": "+996225080276",
       "balance": 0
     }
   ],
@@ -108,6 +117,13 @@
       "userName": "Эдил Мажитов",
       "id": 1762931894457,
       "date": "12.11.2025, 13:18:14"
+    },
+    {
+      "text": "aaa",
+      "rating": 1,
+      "userName": "Эдил Мажитов",
+      "id": 1762955763303,
+      "date": "12.11.2025, 19:56:03"
     }
   ],
   "orders": [
@@ -128,6 +144,81 @@
         }
       ],
       "totalPrice": 12750
+    },
+    {
+      "id": 1762936478965,
+      "user": {
+        "fullName": "Эдил Мажитов",
+        "email": "zusupovaerkinassi@gmail.com",
+        "address": "edilmazitov9@gmail.com"
+      },
+      "items": [
+        {
+          "id": 1,
+          "title": "Перфоратор универсальный Wander X645-46 GF 1450W",
+          "count": 2,
+          "price": 12750,
+          "total": 25500
+        },
+        {
+          "id": 2,
+          "title": "title 2",
+          "count": 2,
+          "price": 1000,
+          "total": 2000
+        },
+        {
+          "id": 3,
+          "title": "title 3",
+          "count": 1,
+          "price": 2000,
+          "total": 2000
+        }
+      ],
+      "totalPrice": 29500
+    },
+    {
+      "id": 1762955705997,
+      "user": {
+        "fullName": "Эдил Мажитов",
+        "email": "zusupovaerkinai@gmail.com",
+        "address": "edilmazitov9@gmail.com"
+      },
+      "items": [
+        {
+          "id": 1,
+          "title": "Перфоратор универсальный Wander X645-46 GF 1450W",
+          "count": 1,
+          "price": 12750,
+          "total": 12750
+        }
+      ],
+      "totalPrice": 12750
+    },
+    {
+      "id": 1762961005965,
+      "user": {
+        "fullName": "Эдил Мажитов",
+        "email": "zusupovaerkinai@gmail.com",
+        "address": "Manas, Sputnick"
+      },
+      "items": [
+        {
+          "id": 1,
+          "title": "Перфоратор универсальный Wander X645-46 GF 1450W",
+          "count": 40,
+          "price": 12750,
+          "total": 510000
+        },
+        {
+          "id": 4,
+          "title": "title 4",
+          "count": 10,
+          "price": 3000,
+          "total": 30000
+        }
+      ],
+      "totalPrice": 540000
     }
   ]
 }

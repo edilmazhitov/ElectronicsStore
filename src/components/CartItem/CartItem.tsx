@@ -1,17 +1,17 @@
-import type { FC } from  "react"
-import styles from "./CartItem.module.scss"
-import type { ICartItem, IProduct } from "@/types/productsTypes";
-import { addCarts, minusOneProducts, removeToCart } from "@/store/reducers/carts.ts";
-import { useAppDispatch } from "@/hooks/reduxHooks.ts";
-import { FaTrash } from "react-icons/fa";
+import type { FC } from 'react'
+import styles from './CartItem.module.scss'
+import type { ICartItem, IProduct } from '@/types/productsTypes'
+import {
+  addCarts,
+  minusOneProducts,
+  removeToCart,
+} from '@/store/reducers/carts.ts'
+import { useAppDispatch } from '@/hooks/reduxHooks.ts'
+import { FaTrash } from 'react-icons/fa'
 
-const CartItem:FC<ICartItem> = (props) => {
-
+const CartItem: FC<ICartItem> = (props) => {
   const dispatch = useAppDispatch()
-  const {
-    itemData,
-    count
-  } = props
+  const { itemData, count } = props
 
   const onPlusProductCount = (item: IProduct) => {
     dispatch(addCarts(item))
@@ -24,11 +24,9 @@ const CartItem:FC<ICartItem> = (props) => {
     dispatch(removeToCart(item))
   }
 
-
   return (
     <>
       <div className={styles.cart}>
-
         <div className={styles.cart__left}>
           <img
             src={itemData.image}
@@ -43,38 +41,42 @@ const CartItem:FC<ICartItem> = (props) => {
           </div>
         </div>
 
-
-        <h2 className={styles.cart__price}>{itemData.price.toLocaleString("ru-RU")}
-          <span>₽</span></h2>
-
+        <h2 className={styles.cart__price}>
+          {itemData.price.toLocaleString('ru-RU')}
+          <span> сом</span>
+        </h2>
 
         <div className={styles.cart__count}>
           <button
             className={styles['cart__count-button']}
             onClick={() => onMinusProductCount(itemData)}
-          >-
+          >
+            -
           </button>
           <p>{count}</p>
           <button
             className={styles['cart__count-button']}
             onClick={() => onPlusProductCount(itemData)}
-          >+
+          >
+            +
           </button>
         </div>
 
-
-        <h2 className={styles.cart__price}>{(itemData.price * count).toLocaleString("ru-RU")}
-          <span>₽</span></h2>
+        <h2 className={styles.cart__price}>
+          {(itemData.price * count).toLocaleString('ru-RU')}
+          <span> сом</span>
+        </h2>
 
         <button
           className={styles.cart__delete}
           onClick={() => onDeleteProductCart(itemData)}
-        ><FaTrash /></button>
-
+        >
+          <FaTrash />
+        </button>
       </div>
-      <hr/>
+      <hr />
     </>
-  );
-};
+  )
+}
 
 export default CartItem

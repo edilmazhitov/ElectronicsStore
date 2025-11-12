@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '@/hooks/reduxHooks.ts'
 import { type SubmitHandler, useForm } from 'react-hook-form'
 import { loginUser } from '@/store/reducers/user'
@@ -7,9 +7,9 @@ import styles from './Login.module.scss'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { GoEye, GoEyeClosed } from 'react-icons/go'
-import { yupResolver } from "@hookform/resolvers/yup"
-import { loginSchema } from "@pages/Login/loginSchema"
-import { toast } from "react-toastify";
+import { yupResolver } from '@hookform/resolvers/yup'
+import { loginSchema } from '@pages/Login/loginSchema'
+import { toast } from 'react-toastify'
 import { Input, Container } from '@components/ui'
 
 const Login = () => {
@@ -17,26 +17,26 @@ const Login = () => {
 
   const { status } = useAppSelector((state) => state.user)
 
-  const { register,
-    handleSubmit
-  } = useForm<Pick<IUser, "email" | "password">>({ mode: 'onBlur', resolver: yupResolver(loginSchema) })
+  const { register, handleSubmit } = useForm<Pick<IUser, 'email' | 'password'>>(
+    { mode: 'onBlur', resolver: yupResolver(loginSchema) }
+  )
 
   const dispatch = useAppDispatch()
 
-  const submitForm: SubmitHandler<Pick<IUser, "email" | "password">> = (data) => {
+  const submitForm: SubmitHandler<Pick<IUser, 'email' | 'password'>> = (
+    data
+  ) => {
     dispatch(loginUser(data))
   }
 
   const navigate = useNavigate()
 
-
   useEffect(() => {
-    if (status === "success") {
+    if (status === 'success') {
       navigate('/')
-      toast.success("Вы авторизованы!", {autoClose: 5000})
+      toast.success('Вы авторизованы!', { autoClose: 5000 })
     }
   }, [status])
-
 
   return (
     <div className={styles.login}>
@@ -76,15 +76,13 @@ const Login = () => {
               {showPassword ? <GoEye /> : <GoEyeClosed />}
             </button>
           </div>
-          <button
-            type="submit"
-            className={styles.login__button}
-          >
+          <button type="submit" className={styles.login__button}>
             Войти
           </button>
         </form>
         <p>
-          У вас есть нет аккаунта?: <Link to="/register">Зарегистироваться</Link>
+          У вас есть нет аккаунта?:{' '}
+          <Link to="/register">Зарегистироваться</Link>
         </p>
       </Container>
     </div>

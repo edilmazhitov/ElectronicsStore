@@ -56,7 +56,7 @@ const reviews = createSlice({
       state.data = []
       state.status = 'idle'
       state.error = null
-    }
+    },
   },
   extraReducers: (builder) => {
     builder
