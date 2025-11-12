@@ -1,0 +1,9 @@
+@use '@/styles/abstracts' as *;
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: rem(5);
+  color: var(--color-blue);
+  margin-bottom: rem(10);
+}

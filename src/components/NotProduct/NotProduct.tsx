@@ -7,7 +7,7 @@ const NotProduct = () => {
   const navigate = useNavigate()
 
   const onGoToCatalog = () => {
-    navigate("/catalog")
+    navigate("/")
   }
 
   return (
@@ -25,7 +25,7 @@ const NotProduct = () => {
         На странице <span>"Каталог"</span> вы найдете много интересных товаров.
       </p>
       <button onClick={onGoToCatalog}  className={styles['not-product__go-to-catalog']}>
-        Перейти в каталог
+        Перейти в главную страницу
       </button>
     </div>
   );

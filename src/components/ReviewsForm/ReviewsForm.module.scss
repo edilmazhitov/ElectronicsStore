@@ -1,17 +1,77 @@
 @use '@/styles/abstracts' as *;
 
 .reviews {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
   &__label {
+    color: var(--color-dark-blue-3);
+
     span {
       color: red;
     }
   }
 
-  &__textarea {
-    width: rem(720);
-    height: rem(90);
-    border: rem(1) solid var(--color-gray-4);
-    border-radius: rem(8);
-    padding: rem(15) rem(10);
+  &__subtitle {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #666;
+    line-height: 1.5;
   }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    & > * {
+      width: 100%;
+    }
+  }
+
+  &__textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+
+    &:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    }
+  }
+
+  &__btn {
+    margin-top: rem(10);
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+
+    &:active {
+      background-color: #004085;
+    }
+  }
+
 }

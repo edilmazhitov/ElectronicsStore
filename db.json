@@ -8,6 +8,15 @@
       "region": "Moscow",
       "phoneNumber": "+7 (777) 777 77 44",
       "balance": 0
+    },
+    {
+      "email": "zusupovaerkinassi@gmail.com",
+      "password": "$2a$10$3Vw0wksG/zqgBKkwVBLch.bIaeMsJ.0lg5vCuz3TbjHM0LROfZIhG",
+      "id": 2,
+      "fullName": "Эдил Мажитов",
+      "region": "Moscow",
+      "phoneNumber": "+7 (777) 777 77 44",
+      "balance": 0
     }
   ],
   "products": [
@@ -78,6 +87,47 @@
       "userName": "Аноним",
       "id": 1762000188051,
       "date": "01.11.2025, 18:29:48"
+    },
+    {
+      "text": "sbjsdhk",
+      "rating": 1,
+      "userName": "Аноним",
+      "id": 1762930159515,
+      "date": "12.11.2025, 12:49:19"
+    },
+    {
+      "text": "sss",
+      "rating": 1,
+      "userName": "Эдил Мажитов",
+      "id": 1762930235981,
+      "date": "12.11.2025, 12:50:35"
+    },
+    {
+      "text": "Отличный интернет-магазин электроники",
+      "rating": 5,
+      "userName": "Эдил Мажитов",
+      "id": 1762931894457,
+      "date": "12.11.2025, 13:18:14"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1762161272244,
+      "user": {
+        "fullName": "Эдил Мажитов",
+        "email": "edilmazhitovbiz@gmail.com",
+        "address": "MAnas"
+      },
+      "items": [
+        {
+          "id": 1,
+          "title": "Перфоратор универсальный Wander X645-46 GF 1450W",
+          "count": 1,
+          "price": 12750,
+          "total": 12750
+        }
+      ],
+      "totalPrice": 12750
     }
   ]
 }

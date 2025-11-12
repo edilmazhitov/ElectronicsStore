@@ -7,7 +7,7 @@ export interface IProduct {
   image: string
   images: string[]
   description: string
-  id?: number
+  id: number
 }
 
 export interface IProductState {
@@ -20,10 +20,20 @@ export type IFavorites = {
   data: [] | IProduct[]
 }
 
-interface ICartItem extends IProduct {
-  count: number
+export interface ICartItem {
+  itemData: {
+    id: string;
+    title: string;
+    description: string;
+    image: string;
+    price: number;
+  };
+  count: number;
 }
+
 
 export interface ICartItemState {
   data: ICartItem[]
 }
+
+

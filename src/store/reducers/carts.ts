@@ -11,32 +11,47 @@ const carts = createSlice({
   reducers: {
     addCarts: (state, action: PayloadAction<IProduct>) => {
       const productId = action.payload.id
+      if (productId === undefined) return
 
-      if (state.data.some((item) => item.id === productId)) {
-        state.data = state.data.map((item) =>
-          item.id === productId ? { ...item, count: item.count + 1 } : item
-        )
+      const existingItem = state.data.find(item => item.itemData?.id === productId)
+
+      if (existingItem) {
+        existingItem.count = (existingItem.count || 1) + 1
       } else {
-        state.data.push({ ...action.payload, count: 1 })
+        state.data.push({ itemData: action.payload, count: 1 })
       }
     },
-    updateCartItem: (state, action: PayloadAction<IProduct>) => {
-      state.data = state.data.map((item) =>
-        item.id === action.payload.id
+    minusOneProducts: (state, action: PayloadAction<IProduct>) => {
+      const productId = action.payload.id
+
+      const existingItem = state.data.find(item => item.itemData?.id === productId)
+
+      if (existingItem.count > 1) {
+        existingItem.count = existingItem.count - 1
+      }
+    },
+    updateCartItem: (state, action: PayloadAction<{ id: number; count: number }>) => {
+      state.data = state.data.map(item =>
+        item.itemData?.id === action.payload.id
           ? { ...item, count: action.payload.count }
           : item
       )
     },
     removeToCart: (state, action: PayloadAction<IProduct>) => {
-      state.data = state.data.filter((item) => item.id !== action.payload.id)
+      state.data = state.data.filter(item => item.itemData?.id !== action.payload.id)
     },
-    clearAllCarts: (state) => {
+    clearCarts: (state) => {
       state.data = []
-    },
+    }
+
   },
 })
 
-export const { addCarts, updateCartItem, removeToCart, clearAllCarts } =
+export const { addCarts,
+  updateCartItem,
+  removeToCart,
+  minusOneProducts,
+  clearCarts } =
   carts.actions
 
 export default carts.reducer

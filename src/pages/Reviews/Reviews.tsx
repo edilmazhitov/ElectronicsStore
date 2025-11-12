@@ -3,6 +3,9 @@ import ReviewsList from '@components/ReviewsList/ReviewsList'
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { clearReviewsState, getAllReviews } from "@/store/reducers/reviews.ts";
+import styles from "./Reviews.module.scss"
+import { Container } from "@components/ui";
+
 
 const Reviews = () => {
 
@@ -18,11 +21,12 @@ const Reviews = () => {
   }, [dispatch]);
 
   return (
-    <>
-      <h1>Reviews</h1>
+    <Container>
+      <h1 className={styles.title}>Отзывы</h1>
       <ReviewsForm />
+      <h2 className={styles.title}>Список отзывов</h2>
       <ReviewsList data={data} />
-    </>
+    </Container>
   )
 }
 
