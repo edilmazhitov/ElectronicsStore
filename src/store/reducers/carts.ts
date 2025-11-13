@@ -28,12 +28,12 @@ const carts = createSlice({
       const existingItem = state.data.find(
         (item) => item.itemData.id === productId
       )
-    
+
       if (existingItem && existingItem.count > 1) {
         existingItem.count -= 1
       }
     },
-    
+
     updateCartItem: (
       state,
       action: PayloadAction<{ id: number; count: number }>

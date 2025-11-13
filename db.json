@@ -1,36 +1,8 @@
 {
-  "users": [
-    {
-      "email": "zusupovasserkinai@gmail.com",
-      "password": "$2a$10$rtlB8zxmZEGIbr2LhFMl3OoPaI5iq72s67MUVAyOMhFO2TBqpqfPO",
-      "id": 1,
-      "fullName": "Эдил Мажитов",
-      "region": "Moscow",
-      "phoneNumber": "+7 (777) 777 77 44",
-      "balance": 0
-    },
-    {
-      "email": "zusupovaerkinassi@gmail.com",
-      "password": "$2a$10$3Vw0wksG/zqgBKkwVBLch.bIaeMsJ.0lg5vCuz3TbjHM0LROfZIhG",
-      "id": 2,
-      "fullName": "Эдил Мажитов",
-      "region": "Moscow",
-      "phoneNumber": "+7 (777) 777 77 44",
-      "balance": 0
-    },
-    {
-      "email": "zusupovaerkinai@gmail.com",
-      "password": "$2a$10$7GR8OpzaNwxKgV9.QsdIHOz5JkehT4esbLxr80PjX7rdTxhz0o2na",
-      "id": 3,
-      "fullName": "Эдил Мажитов",
-      "region": "Манас",
-      "phoneNumber": "+996225080276",
-      "balance": 0
-    }
-  ],
+  "users": [],
   "products": [
     {
-      "title": "Перфоратор универсальный Wander X645-46 GF 1450W",
+      "title": "Перфоратор универ. Wander X645-46",
       "price": 12750,
       "count": 100,
       "image": "https://fv5-7.files.fm/thumb_show.php?i=c9fx9zj43n&view&v=1&PHPSESSID=6716a20520b28e4eca0d0d8b5a87d5c68b99e0a0",
@@ -41,184 +13,50 @@
       "id": 1
     },
     {
-      "title": "title 2",
-      "price": 1000,
+      "title": "Триммерная леска «Спираль-100»",
+      "price": 2600,
       "count": 55,
-      "image": "image 2",
+      "image": "https://i.ibb.co/tpyLtYBW/Rectangle-55.png",
       "images": [],
       "description": "description 2",
       "id": 2
     },
     {
-      "title": "title 3",
-      "price": 2000,
+      "title": "Перфоратор универ. Wander X710-20",
+      "price": 12500,
       "count": 70,
-      "image": "image 3",
+      "image": "https://i.ibb.co/sp82HhTk/Rectangle-22.png",
       "images": [],
       "description": "description 3",
       "id": 3
     },
     {
-      "title": "title 4",
+      "title": "Смеситель Faris G-120 для раковины  ",
       "price": 3000,
       "count": 83,
-      "image": "image 4",
+      "image": "https://i.ibb.co/TxdYwkY1/Rectangle-44.png",
       "images": [],
       "description": "description 4",
       "id": 4
+    },
+    {
+      "title": "ССмеситель Faris G-2077 для раковины",
+      "price": 3000,
+      "count": 83,
+      "image": "https://i.ibb.co/j9ZtkLTv/Rectangle-33.png",
+      "images": [],
+      "description": "description 4",
+      "id": 5
     }
   ],
   "reviews": [
     {
-      "text": "aaaa",
+      "text": "Магазин продаёт качественные товары, советую!",
       "rating": 5,
       "userName": "Эдил Мажитов",
-      "id": 1761668089946,
-      "date": "28.10.2025, 22:14:49"
-    },
-    {
-      "text": "aaaaaaaaa",
-      "rating": 1,
-      "userName": "Эдил Мажитов",
-      "id": 1761668093358,
-      "date": "28.10.2025, 22:14:53"
-    },
-    {
-      "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "rating": 5,
-      "userName": "Эдил Мажитов",
-      "id": 1761668519999,
-      "date": "28.10.2025, 22:21:59"
-    },
-    {
-      "text": "zxx",
-      "rating": 1,
-      "userName": "Аноним",
-      "id": 1762000188051,
-      "date": "01.11.2025, 18:29:48"
-    },
-    {
-      "text": "sbjsdhk",
-      "rating": 1,
-      "userName": "Аноним",
-      "id": 1762930159515,
-      "date": "12.11.2025, 12:49:19"
-    },
-    {
-      "text": "sss",
-      "rating": 1,
-      "userName": "Эдил Мажитов",
-      "id": 1762930235981,
-      "date": "12.11.2025, 12:50:35"
-    },
-    {
-      "text": "Отличный интернет-магазин электроники",
-      "rating": 5,
-      "userName": "Эдил Мажитов",
-      "id": 1762931894457,
-      "date": "12.11.2025, 13:18:14"
-    },
-    {
-      "text": "aaa",
-      "rating": 1,
-      "userName": "Эдил Мажитов",
-      "id": 1762955763303,
-      "date": "12.11.2025, 19:56:03"
+      "id": 1763004605620,
+      "date": "13.11.2025, 09:30:05"
     }
   ],
-  "orders": [
-    {
-      "id": 1762161272244,
-      "user": {
-        "fullName": "Эдил Мажитов",
-        "email": "edilmazhitovbiz@gmail.com",
-        "address": "MAnas"
-      },
-      "items": [
-        {
-          "id": 1,
-          "title": "Перфоратор универсальный Wander X645-46 GF 1450W",
-          "count": 1,
-          "price": 12750,
-          "total": 12750
-        }
-      ],
-      "totalPrice": 12750
-    },
-    {
-      "id": 1762936478965,
-      "user": {
-        "fullName": "Эдил Мажитов",
-        "email": "zusupovaerkinassi@gmail.com",
-        "address": "edilmazitov9@gmail.com"
-      },
-      "items": [
-        {
-          "id": 1,
-          "title": "Перфоратор универсальный Wander X645-46 GF 1450W",
-          "count": 2,
-          "price": 12750,
-          "total": 25500
-        },
-        {
-          "id": 2,
-          "title": "title 2",
-          "count": 2,
-          "price": 1000,
-          "total": 2000
-        },
-        {
-          "id": 3,
-          "title": "title 3",
-          "count": 1,
-          "price": 2000,
-          "total": 2000
-        }
-      ],
-      "totalPrice": 29500
-    },
-    {
-      "id": 1762955705997,
-      "user": {
-        "fullName": "Эдил Мажитов",
-        "email": "zusupovaerkinai@gmail.com",
-        "address": "edilmazitov9@gmail.com"
-      },
-      "items": [
-        {
-          "id": 1,
-          "title": "Перфоратор универсальный Wander X645-46 GF 1450W",
-          "count": 1,
-          "price": 12750,
-          "total": 12750
-        }
-      ],
-      "totalPrice": 12750
-    },
-    {
-      "id": 1762961005965,
-      "user": {
-        "fullName": "Эдил Мажитов",
-        "email": "zusupovaerkinai@gmail.com",
-        "address": "Manas, Sputnick"
-      },
-      "items": [
-        {
-          "id": 1,
-          "title": "Перфоратор универсальный Wander X645-46 GF 1450W",
-          "count": 40,
-          "price": 12750,
-          "total": 510000
-        },
-        {
-          "id": 4,
-          "title": "title 4",
-          "count": 10,
-          "price": 3000,
-          "total": 30000
-        }
-      ],
-      "totalPrice": 540000
-    }
-  ]
+  "orders": []
 }

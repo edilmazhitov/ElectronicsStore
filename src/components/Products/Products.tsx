@@ -19,6 +19,8 @@ const Products = () => {
   }, [dispatch])
 
   const handleFavorites = (item: IProduct) => {
+    toast.success('Товар добавлено в избранные! ', { autoClose: 5000 })
+
     dispatch(toggleFavorites(item))
   }
 
